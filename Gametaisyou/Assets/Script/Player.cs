@@ -29,22 +29,17 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
         }
-        
+
         //上入力で上向きに動く
         if (VerticalKey > 0)
         {
-            rb.velocity = new Vector2(speed, rb.velocity.x);
+            rb.velocity = new Vector2(rb.velocity.x,speed);
         }
         //下入力で下向きに動く
         else if (VerticalKey < 0)
         {
-            rb.velocity = new Vector2(-speed, rb.velocity.x);
+            rb.velocity = new Vector2(rb.velocity.x,-speed);
         }
 
-        ////ボタンを離すと止まる
-        //else
-        //{
-        //    rb.velocity = Vector2.zero;
-        //}
     }
 }
