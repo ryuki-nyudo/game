@@ -38,20 +38,22 @@ public class Player : MonoBehaviour
         if (VerticalKey > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x,speed);
+<<<<<<< HEAD
             Accel();
+=======
+>>>>>>> c194c29b78e1680b617e96ed4aaa8504e1cc64bb
         }
         //下入力で下向きに動く
         else if (VerticalKey < 0)
         {
+<<<<<<< HEAD
             rb.velocity = new Vector2(rb.velocity.x, -speed);
             Accel();
+=======
+            rb.velocity = new Vector2(rb.velocity.x,-speed);
+>>>>>>> c194c29b78e1680b617e96ed4aaa8504e1cc64bb
         }
 
-        ////ボタンを離すと止まる
-        //else
-        //{
-        //    rb.velocity = Vector2.zero;
-        //}
     }
 
     void Accel()
