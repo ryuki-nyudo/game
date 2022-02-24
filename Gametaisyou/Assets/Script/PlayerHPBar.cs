@@ -11,15 +11,21 @@ public class PlayerHPBar : MonoBehaviour
 
     public Slider slider;
 
+    GameObject Player;
+    Player player;
+
     void Start(){
         slider.value = 1;
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
+
+        Player = GameObject.Find("player");
+        player = Player.GetComponent<Player>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider){
         //Enemyタグのオブジェクトに触れると発動
-        if (collider.gameObject.tag == "enemy"){
+        if (collider.gameObject.tag == "enemy" && player.pflag == false){
             int damage = 10;
 
             //現在のHPからダメージを引く
@@ -29,6 +35,9 @@ public class PlayerHPBar : MonoBehaviour
             //int同士の割り算は小数点以下は0になるので、
             //(float)をつけてfloatの変数として振舞わせる。
             slider.value = (float)currentHp / (float)maxHp; ;
+        }
+        else if (collider.gameObject.tag == "enemy" && player.pflag == true){
+            collider.gameObject.SetActive(false);
         }
     }
 }
