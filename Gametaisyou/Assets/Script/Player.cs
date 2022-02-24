@@ -12,16 +12,14 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public bool pflag;
 
-    void Start()
-    {
+    void Start(){
         rb = GetComponent<Rigidbody2D>();
 
         pflag = false;
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
-    void FixedUpdate()
-    {
+    void FixedUpdate(){
         float horizontalKey = Input.GetAxis("Horizontal");
         float VerticalKey = Input.GetAxis("Vertical");
 
@@ -39,8 +37,7 @@ public class Player : MonoBehaviour
         }
 
         //上入力で上向きに動く
-        if (VerticalKey > 0)
-        {
+        if (VerticalKey > 0){
             rb.velocity = new Vector2(rb.velocity.x,speed);
 
             Accel();
