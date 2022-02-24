@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!60 &445809800
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -622,10 +622,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b2e4fdaba3bd44da34e99c17de63f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4da58790577608c4990fe0a2d28a2bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 833814992}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -779,7 +778,7 @@ GameObject:
   - component: {fileID: 833814997}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1547,7 +1546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893007282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.84, y: -3.5, z: 0}
+  m_LocalPosition: {x: -0.0034, y: 5.9195, z: 0}
   m_LocalScale: {x: 1.000461, y: 0.18388262, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
