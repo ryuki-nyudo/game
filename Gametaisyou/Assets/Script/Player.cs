@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class Player : MonoBehaviour
     float seconds;
 
     private Rigidbody2D rb;
+    public bool pflag;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        pflag = false;
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -53,17 +57,18 @@ public class Player : MonoBehaviour
 
     }
 
-    void Accel()
+    public void Accel()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             speed += 15;
+            pflag = true;
             Invoke("Decelerate", 0.3f);
         }
     }
 
-    void Decelerate()
-    {
+    void Decelerate(){
         speed -= 15;
+        pflag = false;
     }
 }
