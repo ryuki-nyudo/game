@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public float speed;
 
-    private Rigidbody2D rb;
+    float seconds;
 
-    void Start()
-    {
+    private Rigidbody2D rb;
+    public bool pflag;
+
+    void Start(){
         rb = GetComponent<Rigidbody2D>();
+
+        pflag = false;
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
-    void FixedUpdate()
-    {
+    void FixedUpdate(){
         float horizontalKey = Input.GetAxis("Horizontal");
         float VerticalKey = Input.GetAxis("Vertical");
 
@@ -23,23 +27,45 @@ public class Player : MonoBehaviour
         if (horizontalKey > 0)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            Accel();
         }
         //左入力で左向きに動く
         else if (horizontalKey < 0)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+            Accel();
         }
 
         //上入力で上向きに動く
-        if (VerticalKey > 0)
-        {
+        if (VerticalKey > 0){
             rb.velocity = new Vector2(rb.velocity.x,speed);
+
+            Accel();
+
         }
         //下入力で下向きに動く
         else if (VerticalKey < 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x,-speed);
+
+            rb.velocity = new Vector2(rb.velocity.x, -speed);
+            Accel();
+
         }
 
+    }
+
+    public void Accel()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            speed += 15;
+            pflag = true;
+            Invoke("Decelerate", 0.3f);
+        }
+    }
+
+    void Decelerate(){
+        speed -= 15;
+        pflag = false;
     }
 }
