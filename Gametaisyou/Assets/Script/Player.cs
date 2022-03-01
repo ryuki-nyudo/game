@@ -11,23 +11,11 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     public bool pflag;
-    public bool slow;
-
-    bool tap = true;
-    int maxSt = 100;
-    double currentSt;
-
-    public Slider slider;
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
 
         pflag = false;
-        slow = false;
-
-        slider.value = 1;
-        currentSt = maxSt;
-
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -63,56 +51,21 @@ public class Player : MonoBehaviour
             Accel();
 
         }
-        if (currentSt < maxSt)
-        {
-            currentSt += 0.09;
-            slider.value = (float)currentSt / (float)maxSt; ;
-            if (slow == true)
-            {
-                speed = 1;
-                currentSt += 0.35;
-                slider.value = (float)currentSt / (float)maxSt; ;
-                if (currentSt > 70)
-                {
-                    slow = false;
-                    speed = 3;
-                }
-            }
-        }
-        if(currentSt < 10)
-        {
-            slow = true;
-        }
-        
+
     }
 
     public void Accel()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(tap == true) {
-                if(slow == false)
-                {
-                    if (currentSt >= 10)
-                    {
-                        int move = 10;
-
-                        currentSt = currentSt - move;
-
-                        slider.value = (float)currentSt / (float)maxSt; ;
-                        tap = false;
-                        speed += 15;
-                        pflag = true;
-                        Invoke("Decelerate", 0.3f);
-                    }
-                }
-            }
+            speed += 15;
+            pflag = true;
+            Invoke("Decelerate", 0.3f);
         }
     }
 
     void Decelerate(){
         speed -= 15;
         pflag = false;
-        tap = true;
     }
 }
