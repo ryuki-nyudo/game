@@ -1368,6 +1368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   pflag: 0
+  slow: 0
+  slider: {fileID: 2053688529}
 --- !u!114 &833814998
 MonoBehaviour:
   m_ObjectHideFlags: 0
