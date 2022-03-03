@@ -211,6 +211,8 @@
 /define:UNITY_2019_1_OR_NEWER
 /define:UNITY_2019_2_OR_NEWER
 /define:UNITY_2019_3_OR_NEWER
+/define:PLATFORM_ARCH_64
+/define:UNITY_64
 /define:UNITY_INCLUDE_TESTS
 /define:ENABLE_AR
 /define:ENABLE_AUDIO
@@ -277,7 +279,6 @@
 /define:ENABLE_UNITY_COLLECTIONS_CHECKS
 /define:ENABLE_BURST_AOT
 /define:UNITY_TEAM_LICENSE
-/define:ENABLE_VSTU
 /define:ENABLE_CUSTOM_RENDER_TEXTURE
 /define:ENABLE_DIRECTOR
 /define:ENABLE_LOCALIZATION
@@ -291,7 +292,9 @@
 Assets\Script\Air.cs
 Assets\Script\Attack.cs
 Assets\Script\EnemyBehaviourScript.cs
+Assets\Script\EnemyDown.cs
 Assets\Script\FollowCamera.cs
 Assets\Script\Player.cs
 Assets\Script\PlayerHPBar.cs
 Assets\Script\camera.cs
+Assets\Script\itemScript.cs
