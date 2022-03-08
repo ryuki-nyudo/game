@@ -9,8 +9,6 @@ ScriptsOnlyBuild:
     - PlayerHPBar
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -570,4 +568,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: "D:/school/\u30C1\u30FC\u30E0\u5236\u4F5C/\u30D3\u30EB\u30C9/Gametaisyou.exe"
+  playerPath: D:/taisyou1/Gametaisyou.exe
