@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         if (currentSt < maxSt)
         {
             currentSt += 0.09;
-            slider.value = (float)currentSt / (float)maxSt; ;
+            slider.value = (float)currentSt / (float)maxSt; 
             if (slow == true)
             {
                 speed = 1;

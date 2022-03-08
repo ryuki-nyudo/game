@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Attack
     - EnemyBehaviourScript
     - FollowCamera
     - Player
@@ -57,17 +58,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11364}
     - Class: 114
+      Script: {instanceID: 11716}
+    - Class: 114
       Script: {instanceID: 11780}
     - Class: 114
       Script: {instanceID: 12112}
     - Class: 114
       Script: {instanceID: 12374}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13086}
     - Class: 114
-      Script: {instanceID: 13116}
+      Script: {instanceID: 13118}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -83,6 +86,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 253
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -321,7 +326,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 1028c39545bcfa841aaab54121e69a47
+      Hash: 7700f193be3711f4e3b404e5a8893170
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHPBar
@@ -351,10 +356,16 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 532434523b8c5ec0eb7932bc959ef77c
+      Hash: 1eb878d8fae62d40738f9c3bdc9fe4c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
+  - hash:
+      serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Air
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -541,7 +552,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: itemScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyDown
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: "D:/school/\u30C1\u30FC\u30E0\u5236\u4F5C/\u30D3\u30EB\u30C9\u7528/Gametaisyou.exe"
+  playerPath: D:/taisyou1/Gametaisyou.exe
