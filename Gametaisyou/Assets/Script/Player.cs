@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     float seconds;
 
+    public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
+
     private Rigidbody2D rb;
     public bool pflag;
     public bool slow;
@@ -34,8 +36,11 @@ public class Player : MonoBehaviour
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
     void FixedUpdate()
     {
+
         float horizontalKey = Input.GetAxis("Horizontal");
         float VerticalKey = Input.GetAxis("Vertical");
+
+        
 
         //右入力で左向きに動く
         if (horizontalKey > 0)
@@ -48,6 +53,8 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             Accel();
+
+
         }
 
         //上入力で上向きに動く
@@ -56,6 +63,8 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, speed);
 
             Accel();
+
+            //rb.AddForce(force, ForceMode2D.Force);
 
         }
         //下入力で下向きに動く
@@ -119,5 +128,15 @@ public class Player : MonoBehaviour
         speed -= 15;
         pflag = false;
         tap = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            //rb.AddForce(0, 0, thrust, ForceMode.Impulse);
+            rb.AddForce(force, ForceMode2D.Impulse);
+            //Debug.Log("Start");
+        }
     }
 }

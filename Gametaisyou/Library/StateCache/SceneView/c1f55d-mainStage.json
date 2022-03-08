@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":205.73622131347657,"y":51.58112335205078,"z":-39.375},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":534.5031127929688,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":1.770930528640747,"y":-3.7503843307495119,"z":-2.01171875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":25.015993118286134,"orthographic":true}
->>>>>>> oshiro5
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":2.2608842849731447,"y":-3.9640908241271974,"z":-1.09695303440094},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":10.509845733642579,"orthographic":true}
