@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
   - box
+  - enemy
+  - HPitem
+  - MPitem
+  - boxb
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Red
   - 
   - 
   - 
