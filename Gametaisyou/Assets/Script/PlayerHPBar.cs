@@ -17,7 +17,7 @@ public class PlayerHPBar : MonoBehaviour
     Player player;
 
     public float pTime;
-    float timer = 0.5f;
+    public float timer = 0.5f;
 
     void Start(){
         slider.value = 1;
@@ -32,7 +32,7 @@ public class PlayerHPBar : MonoBehaviour
         pTime += Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision2D other){
+    public void OnCollisionEnter2D(Collision2D other){
         //Enemyタグのオブジェクトに触れると発動
         if (other.gameObject.tag == "enemy" && player.pflag == false){
 
@@ -45,19 +45,23 @@ public class PlayerHPBar : MonoBehaviour
             slider.value = (float)currentHp / (float)maxHp;
         }
         else if (other.gameObject.tag == "enemy" && player.pflag == true){
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
 
-        if(other.gameObject.tag == "box"){
+        if(other.gameObject.tag == "box" || other.gameObject.tag == "boxb"){
             pTime = 0f;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "item" && timer <= pTime){
+    public void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "HPitem" && timer <= pTime){
             other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
             slider.value = (float)currentHp / (float)maxHp;
+        }
+
+        if(other.gameObject.tag == "MPitem" && timer <= pTime){
+            other.gameObject.SetActive(false);
         }
     }
 }
