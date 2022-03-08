@@ -9,7 +9,11 @@ public class Player : MonoBehaviour
 
     float seconds;
 
+<<<<<<< HEAD
     public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
+=======
+    public bool iflag;
+>>>>>>> e2a9379feb102af879073fa5d35cc50f08e6e17c
 
     private Rigidbody2D rb;
     public bool pflag;
@@ -21,16 +25,22 @@ public class Player : MonoBehaviour
 
     public Slider slider;
 
-    void Start()
-    {
+    // public GameObject MPitem;
+    // MPitem key;
+
+    void Start(){
+        // MPitem = GameObject.Find("key");
+        // key = MPItem.GetComponent<itemScript>();
+
         rb = GetComponent<Rigidbody2D>();
+
+        iflag = false;
 
         pflag = false;
         slow = false;
 
         slider.value = 1;
         currentSt = maxSt;
-
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -100,7 +110,7 @@ public class Player : MonoBehaviour
 
     public void Accel()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) /*&& mpitem.iflag = false*/)
         {
             if (tap == true)
             {
@@ -114,7 +124,28 @@ public class Player : MonoBehaviour
 
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
-                        speed += 15;
+                        speed += 9;
+                        pflag = true;
+                        Invoke("Decelerate", 0.3f);
+                    }
+                }
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) /*&& mpitem.iflag = true*/)
+        {
+            if (tap == true)
+            {
+                if (slow == false)
+                {
+                    if (currentSt >= 10)
+                    {
+                        int move = 10;
+
+                        currentSt = currentSt - move;
+
+                        slider.value = (float)currentSt / (float)maxSt; ;
+                        tap = false;
+                        speed += 18;
                         pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
@@ -125,9 +156,16 @@ public class Player : MonoBehaviour
 
     void Decelerate()
     {
-        speed -= 15;
-        pflag = false;
-        tap = true;
+        //if(mpitem.iflag == fasle){
+            speed -= 9;
+            pflag = false;
+            tap = true;
+        // }
+        // else if(mpitem.iflag == true){
+        //     speed -= 18;
+        //     pflag = false;
+        //     tap = true;
+        // }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
