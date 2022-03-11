@@ -1537,6 +1537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  force: {x: -40, y: 0, z: 0}
   iflag: 0
   pflag: 0
   slow: 0
