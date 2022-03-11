@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
 
     public Slider slider;
 
-    // public GameObject MPitem;
+    // GameObject MPitem;
     // MPitem key;
 
     void Start(){
@@ -155,5 +156,11 @@ public class Player : MonoBehaviour
         //     pflag = false;
         //     tap = true;
         // }
+    }
+
+    public void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag == "goal"){
+            SceneManager.LoadScene("Game2");
+        }
     }
 }
