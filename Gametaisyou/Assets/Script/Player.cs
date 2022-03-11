@@ -9,11 +9,10 @@ public class Player : MonoBehaviour
 
     float seconds;
 
-<<<<<<< HEAD
+
     public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
-=======
+
     public bool iflag;
->>>>>>> e2a9379feb102af879073fa5d35cc50f08e6e17c
 
     private Rigidbody2D rb;
     public bool pflag;
@@ -34,7 +33,7 @@ public class Player : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
-        //iflag = false;
+        iflag = false;
 
         pflag = false;
         slow = false;
