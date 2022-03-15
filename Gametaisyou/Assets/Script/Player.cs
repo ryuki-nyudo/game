@@ -7,15 +7,20 @@ public class Player : MonoBehaviour
 {
     public float speed;
 
+    //GameObject Enemy;
+    //EnemyBehaviourScript script;
+
     float seconds;
     AudioSource audioSource; 
     public AudioClip Sound1;
 
-    public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
+    public Vector3 force = new Vector3(-0.5f, 0.0f, 0.0f);
+    private Rigidbody2D rb;
+
 
     public bool iflag;
 
-    private Rigidbody2D rb;
+   
     public bool pflag;
     public bool slow;
 
@@ -42,6 +47,9 @@ public class Player : MonoBehaviour
 
         slider.value = 1;
         currentSt = maxSt;
+
+        //Enemy = GameObject.Find("Enemy");
+        //script = Enemy.GetComponent<EnemyBehaviourScript>();
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -125,7 +133,7 @@ public class Player : MonoBehaviour
 
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
-                        speed += 9;
+                        speed += 18;
                         pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
@@ -154,8 +162,20 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        
     }
 
+    //void Update()
+    //{
+
+    //    int kkarisu = script.karisu;
+
+    //    if (kkarisu == 1)
+    //    {
+    //        rb.AddForce(force, ForceMode2D.Impulse);
+    //    }
+
+    //}
     void Decelerate()
     {
         //if(mpitem.iflag == fasle){
@@ -174,9 +194,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            //rb.AddForce(0, 0, thrust, ForceMode.Impulse);
+            
             rb.AddForce(force, ForceMode2D.Impulse);
-            //Debug.Log("Start");
+           
         }
     }
 }

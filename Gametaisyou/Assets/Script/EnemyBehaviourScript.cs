@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBehaviourScript : MonoBehaviour
 {
+    public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
+    private Rigidbody2D rb;
     // 2Dリジッドボディを受け取る変数
     Rigidbody2D rb2D;
     // アニメーション制御のやつ
@@ -11,6 +13,8 @@ public class EnemyBehaviourScript : MonoBehaviour
     public float move_speed = 10f; //追跡スピード
     GameObject PlayerObject; // playerオブジェクトを受け取る器
     public Transform Player; // プレイヤーの座標情報などを受け取る器
+
+    //public int karisu = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +30,8 @@ public class EnemyBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Vector3 scale = transform.localScale;       
+
+        Vector3 scale = transform.localScale;
         transform.localScale = scale;
         Vector2 e_pos = transform.position;  // 自分(敵キャラクタ)の世界座標
         Vector2 p_pos = Player.position;  // プレイヤーの世界座標
@@ -61,4 +65,15 @@ public class EnemyBehaviourScript : MonoBehaviour
         // 更新
         rb2D.velocity = enemy_velocity;
     }
+
+    // void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        Debug.Log("hhhhh");
+    //        karisu = 1;
+    //        //rb.AddForce(force, ForceMode2D.Impulse);
+
+    //    }
+    //}
 }
