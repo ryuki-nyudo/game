@@ -409,10 +409,82 @@ Transform:
   - {fileID: 1121074438}
   - {fileID: 1739470808}
   - {fileID: 1785974020}
-  - {fileID: 1332536814}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395652014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395652017}
+  - component: {fileID: 395652016}
+  - component: {fileID: 395652015}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &395652015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395652014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d4e17d6dde1f8b24ab093076836f05f6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &395652016
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395652014}
+  m_CullTransparentMesh: 0
+--- !u!224 &395652017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395652014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1978211172}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.42125005, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.55333334}
+  m_AnchoredPosition: {x: 31.5, y: -11.9}
+  m_SizeDelta: {x: 737, y: 426.2}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &430154595
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +534,7 @@ GameObject:
   - component: {fileID: 445809800}
   - component: {fileID: 445809804}
   - component: {fileID: 445809803}
+  - component: {fileID: 445809805}
   m_Layer: 0
   m_Name: ika_0 (1)
   m_TagString: enemy
@@ -725,6 +798,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move_speed: 0.1
   Player: {fileID: 833814995}
+--- !u!114 &445809805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445809799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0412b63dad9ed6940a99ac03291d3f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyEffect: {fileID: 5856028011296535677, guid: 2c20b403724b52e49b335b570de5f0d1,
+    type: 3}
+  ikasumi: {fileID: 395652014}
+  eTimer: 0
+  etime: 3
+  eflag: 0
 --- !u!1 &458156978
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1088,7 @@ Transform:
   - {fileID: 542453692}
   - {fileID: 781174107}
   - {fileID: 2089844868}
+  - {fileID: 1332536814}
   m_Father: {fileID: 320428651}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1244,6 +1336,7 @@ GameObject:
   - component: {fileID: 833814998}
   - component: {fileID: 833814999}
   - component: {fileID: 833815000}
+  - component: {fileID: 833815001}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -1584,6 +1677,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 777388889}
+--- !u!114 &833815001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833814992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11de02fca6ef844ba0c431d0ecde295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ikasumi: {fileID: 395652014}
+  eTimer: 3
+  etime: 0
+  eflag: 0
 --- !u!1 &855827821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,6 +2223,7 @@ GameObject:
   - component: {fileID: 1332536814}
   - component: {fileID: 1332536815}
   - component: {fileID: 1332536816}
+  - component: {fileID: 1332536817}
   m_Layer: 0
   m_Name: goal
   m_TagString: goal
@@ -2129,11 +2239,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332536813}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28, y: 0.3, z: 3.2776263}
+  m_LocalPosition: {x: 29.77735, y: 1.6091752, z: 3.1911404}
   m_LocalScale: {x: 0.41, y: 0.49, z: 1}
   m_Children: []
-  m_Father: {fileID: 320428651}
-  m_RootOrder: 7
+  m_Father: {fileID: 541075860}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1332536815
 SpriteRenderer:
@@ -2195,7 +2305,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2451,6 +2561,18 @@ PolygonCollider2D:
       - {x: -3.59, y: 2.01}
       - {x: -3.59, y: 1.9499999}
       - {x: -3.58, y: 1.9499999}
+--- !u!114 &1332536817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332536813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80604b3070bb4c347861d328b1dae00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1509842788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,6 +3489,7 @@ RectTransform:
   - {fileID: 2053688528}
   - {fileID: 1671909535}
   - {fileID: 777388888}
+  - {fileID: 395652017}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

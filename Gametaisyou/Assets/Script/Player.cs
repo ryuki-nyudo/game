@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
 
     float seconds;
 
-
     public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
 
     public bool iflag;
