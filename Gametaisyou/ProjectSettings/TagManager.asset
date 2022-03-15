@@ -9,6 +9,8 @@ TagManager:
   - HPitem
   - MPitem
   - boxb
+  - item
+  - goal
   layers:
   - Default
   - TransparentFX
