@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     AudioSource audioSource; 
     public AudioClip Sound1;
 
-
     public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
 
     public bool iflag;
