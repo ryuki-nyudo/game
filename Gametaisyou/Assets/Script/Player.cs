@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float speed;
 
     float seconds;
+    AudioSource audioSource; 
+    public AudioClip Sound1;
 
 
     public Vector3 force = new Vector3(0.5f, 0.0f, 0.0f);
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
         // key = MPItem.GetComponent<itemScript>();
 
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
 
         iflag = false;
 
@@ -145,6 +148,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
+                        audioSource.PlayOneShot(Sound1);
                         pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
