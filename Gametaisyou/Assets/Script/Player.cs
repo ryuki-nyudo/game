@@ -46,19 +46,19 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
 
-        float horizontalKey = Input.GetAxis("Horizontal");
-        float VerticalKey = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
-        
+
 
         //右入力で左向きに動く
-        if (horizontalKey > 0)
+        if (Input.GetAxis("Horizontal") > 0)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
             Accel();
         }
         //左入力で左向きに動く
-        else if (horizontalKey < 0)
+        else if (Input.GetAxis("Horizontal") < 0)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             Accel();
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         }
 
         //上入力で上向きに動く
-        if (VerticalKey > 0)
+        if (Input.GetAxis("Vertical") > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, speed);
 
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
         }
         //下入力で下向きに動く
-        else if (VerticalKey < 0)
+        else if (Input.GetAxis("Vertical") < 0)
         {
 
             rb.velocity = new Vector2(rb.velocity.x, -speed);
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Space) /*&& mpitem.iflag = true*/)
+        else if (Input.GetKeyDown("joystick button 1") /*&& mpitem.iflag = true*/)
         {
             if (tap == true)
             {
@@ -156,7 +156,7 @@ public class Player : MonoBehaviour
     void Decelerate()
     {
         //if(mpitem.iflag == fasle){
-            speed -= 9;
+            speed -= 18;
             pflag = false;
             tap = true;
         // }
