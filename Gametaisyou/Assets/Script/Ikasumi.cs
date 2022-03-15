@@ -8,7 +8,7 @@ public class Ikasumi : MonoBehaviour
     GameObject Player;
     Player player;
 
-    public float eTimer = 5.0f;
+    public float eTimer = 2.0f;
     public float etime;
     public bool eflag;
 
@@ -26,10 +26,12 @@ public class Ikasumi : MonoBehaviour
             ikasumi.gameObject.SetActive(true);
             eflag = false;
             etime = 0.0f;
+            eTimer = 8.0f; 
         }
         
         if(eflag == false && etime >= eTimer){
             ikasumi.gameObject.SetActive(false);
+            eTimer = 2.0f;
         }
     }
 
