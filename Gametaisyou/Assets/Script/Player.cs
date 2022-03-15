@@ -54,13 +54,13 @@ public class Player : MonoBehaviour
 
 
         //右入力で左向きに動く
-        if (Input.GetAxis("Horizontal") > 0)
+        if (horizontal > 0)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
             Accel();
         }
         //左入力で左向きに動く
-        else if (Input.GetAxis("Horizontal") < 0)
+        else if (horizontal < 0)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             Accel();
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         }
 
         //上入力で上向きに動く
-        if (Input.GetAxis("Vertical") > 0)
+        if (vertical > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, speed);
 
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
 
         }
         //下入力で下向きに動く
-        else if (Input.GetAxis("Vertical") < 0)
+        else if (vertical < 0)
         {
 
             rb.velocity = new Vector2(rb.velocity.x, -speed);
@@ -125,7 +125,7 @@ public class Player : MonoBehaviour
 
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
-                        speed += 9;
+                        speed += 18;
                         pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
