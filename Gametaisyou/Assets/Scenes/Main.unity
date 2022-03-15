@@ -1244,6 +1244,7 @@ GameObject:
   - component: {fileID: 833814998}
   - component: {fileID: 833814999}
   - component: {fileID: 833815000}
+  - component: {fileID: 833815001}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -1584,6 +1585,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 777388889}
+--- !u!114 &833815001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833814992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a26db506df57c44b8124469d2e49a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &855827821
 GameObject:
   m_ObjectHideFlags: 0
