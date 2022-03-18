@@ -19,6 +19,8 @@ public class PlayerHPBar : MonoBehaviour
     public float pTime;
     public float timer = 0.5f;
 
+    // AudioSource audioSource;
+    // public AudioClip HPcaveat;
     void Start(){
         slider.value = 1;
         //現在のHPを最大HPと同じに。
@@ -30,6 +32,10 @@ public class PlayerHPBar : MonoBehaviour
 
     void Update(){
         pTime += Time.deltaTime;
+
+        // if(currentHp <= 75){
+        //     audioSource.PlayOneShot(HPcaveat);
+        // }
     }
 
     public void OnCollisionEnter2D(Collision2D other){
