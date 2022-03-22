@@ -159,6 +159,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
+                        audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -166,7 +167,6 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        audioSource.PlayOneShot(Sound1);
                         pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
