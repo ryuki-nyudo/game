@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
         else if (horizontal < 0)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+           
             Accel();
 
 
@@ -194,8 +195,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            
             rb.AddForce(force, ForceMode2D.Impulse);
+
+            Debug.Log("2");
            
         }
     }
