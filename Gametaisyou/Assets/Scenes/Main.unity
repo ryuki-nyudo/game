@@ -2470,6 +2470,10 @@ MonoBehaviour:
   pflag: 0
   slow: 0
   slider: {fileID: 2053688529}
+  enemypower: 30
+  nock: 0
+  ntime: 0
+  nTimer: 0.2
 --- !u!114 &833814998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2514,7 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 777388889}
-  Fade: {fileID: 0}
+  Fade: {fileID: 514014891}
 --- !u!114 &833815001
 MonoBehaviour:
   m_ObjectHideFlags: 0

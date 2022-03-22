@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class Player : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class Player : MonoBehaviour
 
     public Slider slider;
 
+    public float enemypower = 400;
+    public bool nock;
+    public float ntime;
+    public float nTimer = 0.3f;
     // public GameObject MPitem;
     // MPitem key;
 
@@ -48,8 +53,13 @@ public class Player : MonoBehaviour
         slider.value = 1;
         currentSt = maxSt;
 
+        nock = false;
+
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
+    }
+    void Update(){
+        ntime += Time.deltaTime;
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -60,7 +70,7 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-
+        if(nock == false && ntime >= nTimer){
         //右入力で左向きに動く
         if (horizontal > 0)
         {
@@ -113,6 +123,7 @@ public class Player : MonoBehaviour
         if (currentSt < 10)
         {
             slow = true;
+        }
         }
 
     }
@@ -194,9 +205,14 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            
-            rb.AddForce(force, ForceMode2D.Impulse);
-           
+            nock = true;
+            if(nock == true){
+                ntime = 0f;
+                Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
+                rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
+                nock = false;
+            }
+        
         }
     }
 }
