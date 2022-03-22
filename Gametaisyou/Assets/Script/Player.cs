@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public bool iflag;
 
    
-    public bool pflag;
+    public bool attackflag;
     public bool slow;
 
     bool tap = true;
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
 
         iflag = false;
 
-        pflag = false;
+        attackflag = false;
         slow = false;
 
         slider.value = 1;
@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        pflag = true;
+                        attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        pflag = true;
+                        attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -191,12 +191,12 @@ public class Player : MonoBehaviour
     {
         //if(mpitem.iflag == fasle){
             speed -= 18;
-            pflag = false;
+            attackflag = false;
             tap = true;
         // }
         // else if(mpitem.iflag == true){
         //     speed -= 18;
-        //     pflag = false;
+        //     attackflag = false;
         //     tap = true;
         // }
     }
