@@ -17,15 +17,16 @@ public class PlayerHPBar : MonoBehaviour
     Player player;
     GameObject Attack;
     Attack attack;
+    // GameObject Item;
+    // Item item;
 
     public float pTime;
     public float timer = 0.5f;
 
+    public bool HPflag;
+
     AudioSource audioSource;
     public AudioClip HPcaveat;
-    public AudioClip eDown;
-    public AudioClip Rest;
-    public AudioClip Damage;
     bool hflag;
     public float audio;
     public float htimer = 5.0f;
@@ -38,9 +39,12 @@ public class PlayerHPBar : MonoBehaviour
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
 
+        // Item = GameObject.Find("Kai");
+        // item = ItemScript.GetComponent<itemScript>();
+
         audioSource = GetComponent<AudioSource>();
         hflag = false;
-
+        HPflag = false;
     }
 
     void Update(){
@@ -60,10 +64,8 @@ public class PlayerHPBar : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D other){
         //Enemyタグのオブジェクトに触れると発動
         if (other.gameObject.tag == "enemy" && player.pflag == false){
-
             //現在のHPからダメージを引く
             currentHp = currentHp - damage;
-            audioSource.PlayOneShot(Damage);
 
             //最大HPにおける現在のHPをSliderに反映。
             //int同士の割り算は小数点以下は0になるので、
@@ -72,18 +74,18 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if (other.gameObject.tag == "enemy" && player.pflag == true){
             Destroy(other.gameObject);
-            audioSource.PlayOneShot(eDown);
         }
 
-        if(other.gameObject.tag == "itembox" || other.gameObject.tag == "boxb"){
+        if(other.gameObject.tag == "itembox"){
             pTime = 0f;
+            HPflag = true;
         }
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "HPitem" && timer <= pTime){
+            other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
-            audioSource.PlayOneShot(Rest);
             slider.value = (float)currentHp / (float)maxHp;
         }
 
