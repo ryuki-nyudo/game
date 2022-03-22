@@ -11,6 +11,7 @@ TagManager:
   - boxb
   - item
   - goal
+  - itembox
   layers:
   - Default
   - TransparentFX
