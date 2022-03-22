@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
         else if (horizontal < 0)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
-           
+
             Accel();
 
 
@@ -166,6 +166,17 @@ public class Player : MonoBehaviour
         
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+
+            rb.AddForce(force, ForceMode2D.Impulse);
+            Debug.Log("2");
+
+        }
+    }
+
     //void Update()
     //{
 
@@ -191,14 +202,5 @@ public class Player : MonoBehaviour
         // }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "enemy")
-        {
-            rb.AddForce(force, ForceMode2D.Impulse);
-
-            Debug.Log("2");
-           
-        }
-    }
+    
 }

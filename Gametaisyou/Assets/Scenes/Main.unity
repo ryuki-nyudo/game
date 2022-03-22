@@ -1227,7 +1227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47556d1943902e4fb9c5faf55846926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0.5, y: 0, z: 0}
   move_speed: 0.1
   Player: {fileID: 833814995}
 --- !u!114 &445809805
@@ -2543,6 +2542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a26db506df57c44b8124469d2e49a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 0}
+  speed: 0
 --- !u!82 &833815003
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4570,8 +4571,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739470805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037140407, y: 1.4585738, z: 3.2776263}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalPosition: {x: 64.6, y: 1.4585738, z: 3.2776263}
+  m_LocalScale: {x: 150, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 320428651}
   m_RootOrder: 5
