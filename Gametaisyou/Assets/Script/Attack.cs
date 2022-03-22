@@ -22,7 +22,7 @@ public class Attack : MonoBehaviour{
         }
 
         if(other.gameObject.tag == "itembox" && player.pflag == true){
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             Debug.Log("siri");
             HPflag = true;
         }
