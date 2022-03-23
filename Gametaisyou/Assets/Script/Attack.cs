@@ -20,18 +20,18 @@ public class Attack : MonoBehaviour{
 
     //茶色木箱に当たったときの動き
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "box" && player.attackflag == true){
+        if(other.gameObject.tag == "box" && player.pflag == true){
             Destroy(other.gameObject);
             audioSource.PlayOneShot(sound1);
         }
 
-        if(other.gameObject.tag == "itembox" && player.attackflag == true){
+        if(other.gameObject.tag == "itembox" && player.pflag == true){
             other.gameObject.SetActive(false);
             Debug.Log("siri");
             HPflag = true;
         }
 
-        if(other.gameObject.tag == "boxb" && player.attackflag == true){
+        if(other.gameObject.tag == "boxb" && player.pflag == true){
             Destroy(other.gameObject);
             audioSource.PlayOneShot(sound1);
         }

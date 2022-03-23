@@ -23,7 +23,7 @@ public class PlayerHPBar : MonoBehaviour
     public float pTime;
     public float timer = 0.5f;
 
-    public bool Hpflag;
+    public bool HPflag;
 
     AudioSource audioSource;
     public AudioClip HPcaveat;
@@ -44,7 +44,7 @@ public class PlayerHPBar : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         hflag = false;
-        Hpflag = false;
+        HPflag = false;
     }
 
     void Update(){
@@ -63,7 +63,7 @@ public class PlayerHPBar : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other){
         //Enemyタグのオブジェクトに触れると発動
-        if (other.gameObject.tag == "enemy" && player.attackflag == false){
+        if (other.gameObject.tag == "enemy" && player.pflag == false){
             //現在のHPからダメージを引く
             currentHp = currentHp - damage;
 
@@ -72,13 +72,13 @@ public class PlayerHPBar : MonoBehaviour
             //(float)をつけてfloatの変数として振舞わせる。
             slider.value = (float)currentHp / (float)maxHp;
         }
-        else if (other.gameObject.tag == "enemy" && player.attackflag == true){
+        else if (other.gameObject.tag == "enemy" && player.pflag == true){
             Destroy(other.gameObject);
         }
 
         if(other.gameObject.tag == "itembox"){
             pTime = 0f;
-            Hpflag = true;
+            HPflag = true;
         }
     }
 

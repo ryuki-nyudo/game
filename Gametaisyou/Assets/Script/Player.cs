@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public bool iflag;
 
    
-    public bool attackflag;
+    public bool pflag;
     public bool slow;
 
     bool tap = true;
@@ -41,13 +41,13 @@ public class Player : MonoBehaviour
     void Start(){
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
 
         iflag = false;
 
-        attackflag = false;
+        pflag = false;
         slow = false;
 
         slider.value = 1;
@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        attackflag = true;
+                        pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        attackflag = true;
+                        pflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -191,12 +191,12 @@ public class Player : MonoBehaviour
     {
         //if(mpitem.iflag == fasle){
             speed -= 18;
-            attackflag = false;
+            pflag = false;
             tap = true;
         // }
         // else if(mpitem.iflag == true){
         //     speed -= 18;
-        //     attackflag = false;
+        //     pflag = false;
         //     tap = true;
         // }
     }
