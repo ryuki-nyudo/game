@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class itemScript : MonoBehaviour
 {
@@ -13,34 +14,26 @@ public class itemScript : MonoBehaviour
 
     public bool iflag = false;
 
+    public GameObject Box;
+    public GameObject item;
+    public bool ixflag;
+
     void Start(){
         Attack = GameObject.Find("player");
         attack = Attack.GetComponent<Attack>();
 
-        gameObject.SetActive(false);
+        item.gameObject.SetActive(false);
+        Box.gameObject.SetActive(true);
+        ixflag = true;
     }
 
-    void FixedUpdate (){
-        iTime += Time.deltaTime;
-        if(iflag == true && jTime <= 3f){
-            jTime += Time.deltaTime;
-        }
-        else if(iflag == true && jTime > 3f){
-            iflag = false; 
-        }
-        
+    void Update(){
         //item処理
-        for(;attack.HPflag == true;){
+        if(Box.activeSelf == false && ixflag == true){
             iTime = 0f;
+            ixflag = false;
             attack.HPflag = false;
-            gameObject.SetActive(true);
-        }
-    }
-
-    public void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "Player" && timer <= iTime){
-            Debug.Log("unti");
-            gameObject.SetActive(false);
+            item.gameObject.SetActive(true);
         }
     }
 }
