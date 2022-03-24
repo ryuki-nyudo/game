@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     public float enemypower = 400;
     public bool nock;
     public float ntime;
-    public float nTimer = 2000f;
+    public float nTimer = 0.3f;
     // public GameObject MPitem;
     // MPitem key;
 
