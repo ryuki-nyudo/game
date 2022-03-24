@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     void Start(){
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
-        //Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
 

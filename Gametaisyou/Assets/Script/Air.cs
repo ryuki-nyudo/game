@@ -11,7 +11,7 @@ public class Air : MonoBehaviour
 
     public Slider slider;
 
-    GameObject Fade;
+    public GameObject Fade;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class Air : MonoBehaviour
         //現在のHPを最大HPと同じに。
         currentAir = maxAir;
 
-        //Fade = GameObject.Find("AirFade").GetComponent<AirFade>();
+        Fade = GameObject.Find("AirFade");
     }
 
     void FixedUpdate()
@@ -30,11 +30,13 @@ public class Air : MonoBehaviour
             slider.value = (float)currentAir / (float)maxAir; ;
         }
 
-        // if(currentAir >= 90){
-        //     Fade.isFadeIn = true;
-        //     if(Fade.alfa <= 0){
-        //         Fade.isFadeOut = true;
-        //     }
-        // }
+        if(currentAir <= 35){
+            if(Fade.GetComponent<AirFade>().alfa <= 0){
+                Fade.GetComponent<AirFade>().isFadeOut = true;
+            }
+            if(Fade.GetComponent<AirFade>().alfa >= 0.5){
+                Fade.GetComponent<AirFade>().isFadeIn = true;
+            }
+        }
     }
 }
