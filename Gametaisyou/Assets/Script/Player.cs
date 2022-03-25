@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     public bool nock;
     public float ntime;
     public float nTimer = 0.5f;
+
+    public bool goalitem;
     // public GameObject MPitem;
     // MPitem key;
 
@@ -54,6 +56,8 @@ public class Player : MonoBehaviour
         currentSt = maxSt;
 
         nock = false;
+
+        goalitem = false;
 
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
@@ -212,6 +216,13 @@ public class Player : MonoBehaviour
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 nock = false;
             }        
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "goalitem"){
+            Destroy(other.gameObject);
+            goalitem = true;
         }
     }
 }
