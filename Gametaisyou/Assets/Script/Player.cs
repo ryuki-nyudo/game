@@ -211,8 +211,7 @@ public class Player : MonoBehaviour
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 nock = false;
-            }
-        
+            }        
         }
     }
 }
