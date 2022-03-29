@@ -55,6 +55,22 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+#除外ファイル
+hoge.txt
+/foo.txt
+*.class
+hoge*.html
+hoge??.html
+
+#除外する拡張子
+*.log
+
+#除外するディレクトリ
+temp/
+
+*.txt
+!sample.txt
+
 # Crashlytics generated file
 crashlytics-build.properties
 

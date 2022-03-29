@@ -29,22 +29,21 @@ public class Attack : MonoBehaviour{
 
     //茶色木箱に当たったときの動き
      void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "box" && player.pflag == true){
+        if(other.gameObject.tag == "box" && player.attackflag == true){
             
             gameobject.GetComponent<BoxDestroy>().Explode();
             //boxdestroy();
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.tag == "itembox" && player.pflag == true){
+        if(other.gameObject.tag == "itembox" && player.attackflag == true){
             gameobject.GetComponent<BoxDestroy>().Explode();
             //boxdestroy();
-            Destroy(other.gameObject);
-            Debug.Log("siri");
+            other.gameObject.SetActive(false);
             HPflag = true;
         }
 
-        if(other.gameObject.tag == "boxb" && player.pflag == true){
+        if(other.gameObject.tag == "boxb" && player.attackflag == true){
             gameobject.GetComponent<BoxDestroy>().Explode();
             //boxdestroy();
             Destroy(other.gameObject);

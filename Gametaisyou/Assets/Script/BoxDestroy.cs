@@ -7,9 +7,13 @@ public class BoxDestroy : MonoBehaviour
     // 自身の子要素を管理するリスト
     List<GameObject> myParts = new List<GameObject>();
 
+    GameObject Attackflag;
+
     // Start is called before the first frame update
     public void Start()
     {
+        Attackflag = GameObject.Find("player");
+
         // 自分の子要素をチェック
         foreach (Transform child in gameObject.transform)
         {
@@ -53,10 +57,8 @@ public class BoxDestroy : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
+        if (collision.gameObject.tag == "Player" && Attackflag.GetComponent<Player>().attackflag == true){
             Explode();
-            
         }
     }
 }

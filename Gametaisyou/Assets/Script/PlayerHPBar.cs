@@ -63,7 +63,7 @@ public class PlayerHPBar : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other){
         //Enemyタグのオブジェクトに触れると発動
-        if (other.gameObject.tag == "enemy" && player.pflag == false){
+        if (other.gameObject.tag == "enemy" && player.attackflag == false){
             //現在のHPからダメージを引く
             currentHp = currentHp - damage;
 
@@ -72,7 +72,7 @@ public class PlayerHPBar : MonoBehaviour
             //(float)をつけてfloatの変数として振舞わせる。
             slider.value = (float)currentHp / (float)maxHp;
         }
-        else if (other.gameObject.tag == "enemy" && player.pflag == true){
+        else if (other.gameObject.tag == "enemy" && player.attackflag == true){
             Destroy(other.gameObject);
         }
 
