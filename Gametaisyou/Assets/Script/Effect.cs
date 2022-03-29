@@ -22,7 +22,7 @@ public class Effect : MonoBehaviour{
     }
 
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "Player" && player.pflag == true){
+        if(other.gameObject.tag == "Player" && player.attackflag == true){
             eflag = true;
             EEffect();
         }

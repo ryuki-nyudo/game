@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class Player : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     public bool iflag;
 
    
-    public bool pflag;
+    public bool attackflag;
     public bool slow;
 
     bool tap = true;
@@ -30,26 +31,39 @@ public class Player : MonoBehaviour
 
     public Slider slider;
 
+    public float enemypower = 400;
+    public bool nock;
+    public float ntime;
+    public float nTimer = 0.5f;
+
+    public bool goalitem;
     // public GameObject MPitem;
     // MPitem key;
 
     void Start(){
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
-
+        Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
 
         iflag = false;
 
-        pflag = false;
+        attackflag = false;
         slow = false;
 
         slider.value = 1;
         currentSt = maxSt;
 
+        nock = false;
+
+        goalitem = false;
+
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
+    }
+    void Update(){
+        ntime += Time.deltaTime;
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -60,59 +74,60 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-
-        //右入力で左向きに動く
-        if (horizontal > 0)
-        {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-            Accel();
-        }
-        //左入力で左向きに動く
-        else if (horizontal < 0)
-        {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-            Accel();
-
-
-        }
-
-        //上入力で上向きに動く
-        if (vertical > 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, speed);
-
-            Accel();
-
-            //rb.AddForce(force, ForceMode2D.Force);
-
-        }
-        //下入力で下向きに動く
-        else if (vertical < 0)
-        {
-
-            rb.velocity = new Vector2(rb.velocity.x, -speed);
-            Accel();
-
-        }
-        if (currentSt < maxSt)
-        {
-            currentSt += 0.09;
-            slider.value = (float)currentSt / (float)maxSt; 
-            if (slow == true)
+        if(nock == false && ntime >= nTimer){
+            //右入力で左向きに動く
+            if (horizontal > 0)
             {
-                speed = 1;
-                currentSt += 0.35;
-                slider.value = (float)currentSt / (float)maxSt; ;
-                if (currentSt > 70)
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+                Accel();
+            }
+            //左入力で左向きに動く
+            else if (horizontal < 0)
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                Accel();
+
+
+            }
+
+            //上入力で上向きに動く
+            if (vertical > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, speed);
+
+                Accel();
+
+                //rb.AddForce(force, ForceMode2D.Force);
+
+            }
+            //下入力で下向きに動く
+            else if (vertical < 0)
+            {
+
+                rb.velocity = new Vector2(rb.velocity.x, -speed);
+                Accel();
+
+            }
+            if (currentSt < maxSt)
+            {
+                currentSt += 0.09;
+                slider.value = (float)currentSt / (float)maxSt; 
+                if (slow == true)
                 {
-                    slow = false;
-                    speed = 3;
+                    speed = 1;
+                    currentSt += 0.35;
+                    slider.value = (float)currentSt / (float)maxSt; ;
+                    if (currentSt > 70)
+                    {
+                        slow = false;
+                        speed = 3;
+                    }
                 }
             }
-        }
-        if (currentSt < 10)
-        {
-            slow = true;
+            if (currentSt < 10)
+            {
+                slow = true;
+            }
         }
 
     }
@@ -134,7 +149,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        pflag = true;
+                        attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -148,6 +163,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
+                        audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -155,8 +171,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        audioSource.PlayOneShot(Sound1);
-                        pflag = true;
+                        attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -180,12 +195,12 @@ public class Player : MonoBehaviour
     {
         //if(mpitem.iflag == fasle){
             speed -= 18;
-            pflag = false;
+            attackflag = false;
             tap = true;
         // }
         // else if(mpitem.iflag == true){
         //     speed -= 18;
-        //     pflag = false;
+        //     attackflag = false;
         //     tap = true;
         // }
     }
@@ -194,9 +209,20 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            
-            rb.AddForce(force, ForceMode2D.Impulse);
-           
+            nock = true;
+            if(nock == true){
+                ntime = 0f;
+                Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
+                rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
+                nock = false;
+            }        
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "goalitem"){
+            Destroy(other.gameObject);
+            goalitem = true;
         }
     }
 }

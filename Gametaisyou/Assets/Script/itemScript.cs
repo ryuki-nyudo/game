@@ -1,46 +1,39 @@
-﻿// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-// public class itemScript : MonoBehaviour
-// {
-//     GameObject Attack;
-//     Attack attack;
+public class itemScript : MonoBehaviour
+{
+    GameObject Attack;
+    Attack attack;
 
-//     public float iTime;
-//     public float timer = 0.5f;
-//     public float jTime;
+    public float iTime;
+    public float timer = 0.5f;
+    public float jTime;
 
-//     public bool iflag = false;
+    public bool iflag = false;
 
-//     void Start(){
-//         Attack = GameObject.Find("player");
-//         attack = Attack.GetComponent<Attack>();
+    public GameObject Box;
+    public GameObject item;
+    public bool ixflag;
 
-//         gameObject.SetActive(false);
-//     }
+    void Start(){
+        Attack = GameObject.Find("player");
+        attack = Attack.GetComponent<Attack>();
 
-//     void FixedUpdate (){
-//         iTime += Time.deltaTime;
-//         if(iflag == true && jTime <= 3f){
-//             jTime += Time.deltaTime;
-//         }
-//         else if(iflag == true && jTime > 3f){
-//             iflag = false; 
-//         }
-        
-//         //item処理
-//         for(;attack.HPflag == true;){
-//             iTime = 0f;
-//             attack.HPflag = false;
-//             gameObject.SetActive(true);
-//         }
-//     }
+        item.gameObject.SetActive(false);
+        Box.gameObject.SetActive(true);
+        ixflag = true;
+    }
 
-//     public void OnCollisionEnter2D(Collision2D other){
-//         if(other.gameObject.tag == "Player" && timer <= iTime){
-//             Debug.Log("unti");
-//             gameObject.SetActive(false);
-//         }
-//     }
-// }
+    void Update(){
+        //item処理
+        if(Box.activeSelf == false && ixflag == true){
+            iTime = 0f;
+            ixflag = false;
+            attack.HPflag = false;
+            item.gameObject.SetActive(true);
+        }
+    }
+}
