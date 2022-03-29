@@ -22,7 +22,7 @@ public class PlayerHPBar : MonoBehaviour
 
     public float pTime;
     public float timer = 0.5f;
-
+    public GameObject gameovertxt;
     public bool HPflag;
 
     AudioSource audioSource;
@@ -32,6 +32,7 @@ public class PlayerHPBar : MonoBehaviour
     public float htimer = 5.0f;
 
     void Start(){
+        gameovertxt.SetActive(false);
         slider.value = 1;
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
@@ -58,6 +59,11 @@ public class PlayerHPBar : MonoBehaviour
                 audio = 0f;
                 hflag = false;
             }
+        }
+        if(currentHp <= 0)
+        {
+            gameovertxt.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
