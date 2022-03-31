@@ -26,7 +26,10 @@ public class PlayerHPBar : MonoBehaviour
     public bool HPflag;
 
     AudioSource audioSource;
+    public AudioClip damageSE;
     public AudioClip HPcaveat;
+    public AudioClip HealSE;
+    public AudioClip DestroySE;
     bool hflag;
     public float audio;
     public float htimer = 5.0f;
@@ -66,6 +69,7 @@ public class PlayerHPBar : MonoBehaviour
         if (other.gameObject.tag == "enemy" && player.attackflag == false){
             //現在のHPからダメージを引く
             currentHp = currentHp - damage;
+            audioSource.PlayOneShot(damageSE);
 
             //最大HPにおける現在のHPをSliderに反映。
             //int同士の割り算は小数点以下は0になるので、
@@ -74,6 +78,7 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if (other.gameObject.tag == "enemy" && player.attackflag == true){
             Destroy(other.gameObject);
+            audioSource.PlayOneShot(DestroySE);
         }
 
         if(other.gameObject.tag == "itembox"){
@@ -86,6 +91,7 @@ public class PlayerHPBar : MonoBehaviour
         if(other.gameObject.tag == "HPitem" && timer <= pTime){
             other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
+            audioSource.PlayOneShot(HealSE);
             slider.value = (float)currentHp / (float)maxHp;
         }
 
