@@ -3665,7 +3665,10 @@ MonoBehaviour:
   pTime: 0
   timer: 0.5
   HPflag: 0
+  damageSE: {fileID: 8300000, guid: b803da03dc8380e4da814b53aae42a27, type: 3}
   HPcaveat: {fileID: 8300000, guid: d436b3b29fd24dd44a30758526e6e282, type: 3}
+  HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
+  DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
   audio: 0
   htimer: 5
 --- !u!114 &833814999
