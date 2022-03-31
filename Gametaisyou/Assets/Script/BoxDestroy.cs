@@ -8,6 +8,8 @@ public class BoxDestroy : MonoBehaviour
     List<GameObject> myParts = new List<GameObject>();
 
     GameObject Attackflag;
+    public GameObject box;
+    public BoxCollider2D col;
 
     // Start is called before the first frame update
     public void Start()
@@ -29,12 +31,19 @@ public class BoxDestroy : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
+    //public void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
            
-        }
+    //    }
+    //}
+
+    void boxdestroy()
+    {
+        Destroy(this.gameObject);
+        box.SetActive(false);
+        Debug.Log("けした");
     }
 
     public void Explode()
@@ -52,13 +61,19 @@ public class BoxDestroy : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().isKinematic = false;
             obj.GetComponent<Rigidbody2D>().AddForce(forcePower, ForceMode2D.Impulse);
             obj.GetComponent<Rigidbody2D>().AddTorque(torquePower, ForceMode2D.Impulse);
+
+            col.enabled = false;
         }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Attackflag.GetComponent<Player>().attackflag == true){
+        if (collision.gameObject.tag == "Player" && Attackflag.GetComponent<Player>().attackflag == true)
+        {
+            
             Explode();
+            
+            //Invoke("boxdestroy", 0.01f);
         }
     }
 }
