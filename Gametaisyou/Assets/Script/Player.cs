@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public bool iflag;
 
    
-    public bool pflag;
+    public bool attackflag;
     public bool slow;
 
     bool tap = true;
@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     public bool nock;
     public float ntime;
     public float nTimer = 0.5f;
+
+    public bool goalitem;
     // public GameObject MPitem;
     // MPitem key;
 
@@ -47,13 +49,15 @@ public class Player : MonoBehaviour
 
         iflag = false;
 
-        pflag = false;
+        attackflag = false;
         slow = false;
 
         slider.value = 1;
         currentSt = maxSt;
 
         nock = false;
+
+        goalitem = false;
 
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
@@ -145,7 +149,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        pflag = true;
+                        attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -167,7 +171,7 @@ public class Player : MonoBehaviour
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
                         speed += 18;
-                        pflag = true;
+                        attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
                 }
@@ -191,12 +195,12 @@ public class Player : MonoBehaviour
     {
         //if(mpitem.iflag == fasle){
             speed -= 18;
-            pflag = false;
+            attackflag = false;
             tap = true;
         // }
         // else if(mpitem.iflag == true){
         //     speed -= 18;
-        //     pflag = false;
+        //     attackflag = false;
         //     tap = true;
         // }
     }
@@ -212,6 +216,13 @@ public class Player : MonoBehaviour
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 nock = false;
             }        
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "goalitem"){
+            Destroy(other.gameObject);
+            goalitem = true;
         }
     }
 }

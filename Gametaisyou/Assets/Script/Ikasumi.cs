@@ -36,7 +36,7 @@ public class Ikasumi : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.tag == "enemy" && player.pflag == true){
+        if(other.gameObject.tag == "enemy" && player.attackflag == true){
             etime = 0f;
             eflag = true;
         }
