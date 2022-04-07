@@ -7,9 +7,11 @@ public class PlayerHPBar : MonoBehaviour
 {
     //最大HPと現在のHP。
     int maxHp = 100;
-    int currentHp;
+    float currentHp;
+    float initialHp;
     int recovery = 30;
     int damage = 10;
+    public int start = 0;
 
     public Slider slider;
 
@@ -40,10 +42,22 @@ public class PlayerHPBar : MonoBehaviour
 
     public GameObject gameover;
 
-    void Start(){
-        slider.value = 1;
-        //現在のHPを最大HPと同じに。
-        currentHp = maxHp;
+    void Start() {
+        if (start == 0)
+        {
+            Debug.Log(start);
+            //現在のHPを最大HPと同じに。
+            currentHp = maxHp;
+
+            slider.value = 1;
+        }
+        else if(start >= 1)
+        {
+            Debug.Log(start);
+            initialHp = currentHp;
+
+            slider.value = initialHp;
+        }
 
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
