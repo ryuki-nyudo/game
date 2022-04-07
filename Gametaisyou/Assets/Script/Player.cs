@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public float attackspeed = 18;
 
     //GameObject Enemy;
     //EnemyBehaviourScript script;
@@ -148,7 +149,7 @@ public class Player : MonoBehaviour
 
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
-                        speed += 18;
+                        speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
@@ -170,7 +171,7 @@ public class Player : MonoBehaviour
 
                         slider.value = (float)currentSt / (float)maxSt; ;
                         tap = false;
-                        speed += 18;
+                        speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
                     }
@@ -194,7 +195,7 @@ public class Player : MonoBehaviour
     void Decelerate()
     {
         //if(mpitem.iflag == fasle){
-            speed -= 18;
+            speed -= attackspeed;
             attackflag = false;
             tap = true;
         // }
