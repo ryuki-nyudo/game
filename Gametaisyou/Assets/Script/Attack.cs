@@ -33,23 +33,24 @@ public class Attack : MonoBehaviour{
         if (other.gameObject.tag == "box" && player.attackflag == true)
         {
 
-            gameobject.GetComponent<BoxDestroy>().Explode();
-            //boxdestroy();
+            //gameobject.GetComponent<BoxDestroy>().Explode();
+
+            
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "itembox" && player.attackflag == true)
         {
-            gameobject.GetComponent<BoxDestroy>().Explode();
-            //boxdestroy();
-            other.gameObject.SetActive(false);
+
+           
+            
             HPflag = true;
         }
 
         if (other.gameObject.tag == "boxb" && player.attackflag == true)
         {
-            gameobject.GetComponent<BoxDestroy>().Explode();
-            //boxdestroy();
+            //gameobject.GetComponent<BoxDestroy>().Explode();
+            
             Destroy(other.gameObject);
         }
     }

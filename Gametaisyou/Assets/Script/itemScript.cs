@@ -18,6 +18,8 @@ public class itemScript : MonoBehaviour
     public GameObject item;
     public bool ixflag;
 
+    BoxDestroy script;
+
     void Start(){
         Attack = GameObject.Find("player");
         attack = Attack.GetComponent<Attack>();
@@ -26,10 +28,23 @@ public class itemScript : MonoBehaviour
         Box.gameObject.SetActive(true);
         ixflag = true;
     }
-
-    void Update(){
+    
+    //    void Update(){
+    //        //item処理
+    //        if (Box.activeSelf == false && ixflag == true)
+    //        {
+    //            iTime = 0f;
+    //            ixflag = false;
+    //            attack.HPflag = false;
+    //            item.gameObject.SetActive(true);
+    //        }
+    //    }
+    //}
+    void Update()
+    {
         //item処理
-        if(Box.activeSelf == false && ixflag == true){
+        if ( script.col.enabled == false && ixflag == true)
+        {
             iTime = 0f;
             ixflag = false;
             attack.HPflag = false;

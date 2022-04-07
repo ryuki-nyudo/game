@@ -62,7 +62,11 @@ public class BoxDestroy : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddForce(forcePower, ForceMode2D.Impulse);
             obj.GetComponent<Rigidbody2D>().AddTorque(torquePower, ForceMode2D.Impulse);
 
+
+            //コライダーを無効にする
             col.enabled = false;
+            //col = false;
+            //this.gameObject.SetActive(false);
         }
     }
 
