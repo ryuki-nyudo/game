@@ -3824,9 +3824,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 833814992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7148d18bc60c7c419a23efc0c4c859d, type: 3}
+  m_Script: {fileID: 11500000, guid: f5f1158d3d2125247a81dba39b9ec1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: 0
   slider: {fileID: 1105204011}
   pTime: 0
   timer: 0.5
@@ -3836,8 +3837,8 @@ MonoBehaviour:
   HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
   DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
   audio: 0
-  htimer: 5
-  MPtimer: 10
+  htimer: 3
+  MPtimer: 1
   MPtime: 0
   gameover: {fileID: 522614671}
 --- !u!114 &833814999
@@ -5954,8 +5955,8 @@ GameObject:
   - component: {fileID: 1676444348}
   - component: {fileID: 1676444347}
   - component: {fileID: 1676444346}
-  - component: {fileID: 1676444345}
   - component: {fileID: 1676444349}
+  - component: {fileID: 1676444345}
   m_Layer: 0
   m_Name: doukutu
   m_TagString: goal
@@ -5972,7 +5973,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676444344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80604b3070bb4c347861d328b1dae00e, type: 3}
+  m_Script: {fileID: 11500000, guid: 34ae328d17effc348b63687cc450a531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GoalSE: {fileID: 8300000, guid: c8bc05ed412142a48a2d65b49701a5d3, type: 3}

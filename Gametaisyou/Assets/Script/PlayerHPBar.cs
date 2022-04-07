@@ -51,8 +51,9 @@ public class PlayerHPBar : MonoBehaviour
 
             slider.value = 1;
         }
-        else
+        else if(start >= 1)
         {
+            Debug.Log(start);
             initialHp = currentHp;
 
             slider.value = initialHp;
