@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
         player = Player.GetComponent<Player>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float input = Input.GetAxisRaw("Horizontal");
         //進行方向へ向きを変える

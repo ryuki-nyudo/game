@@ -32,7 +32,13 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip DestroySE;
     bool hflag;
     public float audio;
-    public float htimer = 5.0f;
+    public float htimer = 3.0f;
+
+    public float MPtimer = 1.0f;
+    public float MPtime;
+    bool MPflag;
+
+    public GameObject gameover;
 
     void Start(){
         slider.value = 1;
@@ -48,11 +54,21 @@ public class PlayerHPBar : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         hflag = false;
         HPflag = false;
+
+        gameover.SetActive(false);
+
+        MPflag = false;
     }
 
     void Update(){
         pTime += Time.deltaTime;
         audio += Time.deltaTime;
+        MPtime += Time.deltaTime;
+
+        if(MPflag == true && MPtime >= MPtimer){
+            MPflag = false;
+            player.attackspeed -= 36;
+        }
 
         if(currentHp <= 75){
             hflag = true;
@@ -61,6 +77,11 @@ public class PlayerHPBar : MonoBehaviour
                 audio = 0f;
                 hflag = false;
             }
+        }
+
+        if(currentHp <= 0){
+            gameover.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
@@ -95,7 +116,10 @@ public class PlayerHPBar : MonoBehaviour
             slider.value = (float)currentHp / (float)maxHp;
         }
 
-        if(other.gameObject.tag == "MPitem" && timer <= pTime){
+        if(other.gameObject.tag == "MPitem" /*&& timer <= pTime*/){
+            MPflag = true;
+            MPtime = 0f;
+            player.attackspeed += 36;
             other.gameObject.SetActive(false);
         }
     }
