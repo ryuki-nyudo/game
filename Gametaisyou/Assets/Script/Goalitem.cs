@@ -39,6 +39,7 @@ public class Goalitem : MonoBehaviour
     }
     void SceneChange()
     {
+        Player.GetComponent<PlayerHPBar>().start += 1;
         SceneManager.LoadScene("Game2");
     }
 }
