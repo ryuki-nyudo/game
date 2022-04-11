@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class PlayerHPBar : MonoBehaviour
 {
     //最大HPと現在のHP。
-    int maxHp = 100;
-    float currentHp;
-    float initialHp;
+    float maxHp = 100;
+    public float initialHp;
+    public float currentHp;
     int recovery = 30;
     int damage = 10;
-    public int start = 0;
+    public static float start;
 
     public Slider slider;
 
@@ -56,7 +56,7 @@ public class PlayerHPBar : MonoBehaviour
             Debug.Log(start);
             initialHp = currentHp;
 
-            slider.value = initialHp;
+            slider.value = initialHp / maxHp;
         }
 
         Player = GameObject.Find("player");
@@ -123,11 +123,14 @@ public class PlayerHPBar : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "HPitem" && timer <= pTime){
+        if(other.gameObject.tag == "HPitem"/* && timer <= pTime*/){
             other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
             audioSource.PlayOneShot(HealSE);
             slider.value = (float)currentHp / (float)maxHp;
+            if(currentHp > 100){
+                currentHp = 100;
+            }
         }
 
         if(other.gameObject.tag == "MPitem" /*&& timer <= pTime*/){
@@ -135,6 +138,10 @@ public class PlayerHPBar : MonoBehaviour
             MPtime = 0f;
             player.attackspeed += 36;
             other.gameObject.SetActive(false);
+        }
+
+        if(other.gameObject.tag == "goal" && player.goalitem == true){
+            start++;
         }
     }
 }

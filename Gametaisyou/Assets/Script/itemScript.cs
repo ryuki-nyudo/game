@@ -43,12 +43,12 @@ public class itemScript : MonoBehaviour
     void Update()
     {
         //item処理
-        if ( script.col.enabled == false && ixflag == true)
-        {
-            iTime = 0f;
-            ixflag = false;
-            attack.HPflag = false;
-            item.gameObject.SetActive(true);
-        }
+        // if ( && ixflag == true)
+        // {
+        //     iTime = 0f;
+        //     ixflag = false;
+        //     attack.HPflag = false;
+        //     item.gameObject.SetActive(true);
+        // }
     }
 }
