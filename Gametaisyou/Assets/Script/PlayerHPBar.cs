@@ -7,8 +7,8 @@ public class PlayerHPBar : MonoBehaviour
 {
     //最大HPと現在のHP。
     float maxHp = 100;
-    public float initialHp;
-    public float currentHp;
+    public static float initialHp;
+    public static float currentHp;
     int recovery = 30;
     int damage = 10;
     public static float start;
