@@ -26,7 +26,7 @@ public class Air : MonoBehaviour
     {
         if (currentAir <= maxAir)
         {
-            currentAir -= 0.01;
+            currentAir -= 0.025;
             slider.value = (float)currentAir / (float)maxAir; ;
         }
 
