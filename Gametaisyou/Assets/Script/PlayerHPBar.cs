@@ -32,6 +32,7 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip HPcaveat;
     public AudioClip HealSE;
     public AudioClip DestroySE;
+    public AudioClip Muteki;
     bool hflag;
     public float audio;
     public float htimer = 3.0f;
@@ -81,10 +82,11 @@ public class PlayerHPBar : MonoBehaviour
 
         if(MPflag == true && MPtime >= MPtimer){
             MPflag = false;
+            //audioSource.PlayOneShot(Muteki);
             player.attackspeed -= 36;
         }
 
-        if(currentHp <= 75){
+        if(currentHp <= 30){
             hflag = true;
             if(hflag == true && audio >= htimer){
                 audioSource.PlayOneShot(HPcaveat);

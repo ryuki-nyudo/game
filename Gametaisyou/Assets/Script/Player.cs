@@ -155,6 +155,7 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
+                        //Destroy(AttackEffect);
                     }
                 }
             }
@@ -178,6 +179,7 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
+                        //Destroy(AttackEffect);
                     }
                 }
             }
@@ -232,6 +234,7 @@ public class Player : MonoBehaviour
     }
 
     void Effect(){
+        Debug.Log("deta");
         GameObject effect = Instantiate(AttackEffect) as GameObject;
         effect.transform.position = gameObject.transform.position;
     }
