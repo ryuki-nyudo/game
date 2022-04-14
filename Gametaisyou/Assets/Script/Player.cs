@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
     public float ntime;
     public float nTimer = 0.5f;
 
+    public GameObject AttackEffect;
+
     public bool goalitem;
     // public GameObject MPitem;
     // MPitem key;
@@ -143,6 +145,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
+                        //Effect();
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -152,6 +155,7 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
+                        //Destroy(AttackEffect);
                     }
                 }
             }
@@ -164,6 +168,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
+                        //Effect();
                         audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
@@ -174,6 +179,7 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
+                        //Destroy(AttackEffect);
                     }
                 }
             }
@@ -225,5 +231,11 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             goalitem = true;
         }
+    }
+
+    void Effect(){
+        Debug.Log("deta");
+        GameObject effect = Instantiate(AttackEffect) as GameObject;
+        effect.transform.position = gameObject.transform.position;
     }
 }
