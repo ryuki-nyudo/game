@@ -1568,6 +1568,7 @@ GameObject:
   - component: {fileID: 7203193789175572826}
   - component: {fileID: 7203193789175572828}
   - component: {fileID: 7203193789175572827}
+  - component: {fileID: 146628539385899846}
   m_Layer: 0
   m_Name: woodbox 1 1
   m_TagString: itembox
@@ -1704,6 +1705,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box: {fileID: 7149564844090417854}
   col: {fileID: 7203193789175572826}
+  KAIsyutugen: 0
+--- !u!114 &146628539385899846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149564844090417854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bbcf3bc873a584a98215627ba4747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iTime: 0
+  timer: 0.5
+  jTime: 0
+  iflag: 0
+  Box: {fileID: 0}
+  item: {fileID: 0}
+  ixflag: 0
 --- !u!1 &7217460594468563316
 GameObject:
   m_ObjectHideFlags: 0
