@@ -11,6 +11,8 @@ public class BoxDestroy : MonoBehaviour
     public GameObject box;
     public BoxCollider2D col;
 
+    public bool KAIsyutugen = false; //コライダーが消えたら貝を出現させるための判定
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -37,12 +39,12 @@ public class BoxDestroy : MonoBehaviour
     //    }
     //}
 
-    void boxdestroy()
-    {
-        Destroy(this.gameObject);
-        box.SetActive(false);
-        Debug.Log("けした");
-    }
+    //void boxdestroy()
+    //{
+    //    Destroy(this.gameObject);
+    //    box.SetActive(false);
+    //    Debug.Log("けした");
+    //}
 
     public void Explode()
     {
@@ -61,10 +63,10 @@ public class BoxDestroy : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddTorque(torquePower, ForceMode2D.Impulse);
 
 
-            //コライダーを無効にする
-            col.enabled = false;
-            //col = false;
-            //this.gameObject.SetActive(false);
+            
+            col.enabled = false;　//コライダーを消す
+            KAIsyutugen = true;　　　//貝を出現させる
+            　
         }
     }
 
