@@ -25,7 +25,6 @@ public class BoxDestroy : MonoBehaviour
 
             // 子要素リストにパーツを追加
             myParts.Add(child.gameObject);
-
         }
     }
 
@@ -75,7 +74,6 @@ public class BoxDestroy : MonoBehaviour
         {
             
             Explode();
-            
             //Invoke("boxdestroy", 0.01f);
         }
     }
