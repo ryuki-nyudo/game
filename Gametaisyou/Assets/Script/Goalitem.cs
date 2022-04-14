@@ -29,9 +29,9 @@ public class Goalitem : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && Player.GetComponent<Player>().goalitem == true)
+        if (other.gameObject.tag == "Player" /*&& Player.GetComponent<Player>().goalitem == true*/)
         {
             audioSource.PlayOneShot(GoalSE);
             Invoke("SceneChange", 1.5f);
@@ -39,7 +39,6 @@ public class Goalitem : MonoBehaviour
     }
     void SceneChange()
     {
-        Player.GetComponent<PlayerHPBar>().start += 1;
         SceneManager.LoadScene("Game2");
     }
 }

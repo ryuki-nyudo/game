@@ -15,7 +15,6 @@ public class BoxDestroy : MonoBehaviour
     public void Start()
     {
         Attackflag = GameObject.Find("player");
-
         // 自分の子要素をチェック
         foreach (Transform child in gameObject.transform)
         {
@@ -26,7 +25,6 @@ public class BoxDestroy : MonoBehaviour
 
             // 子要素リストにパーツを追加
             myParts.Add(child.gameObject);
-
         }
     }
 
@@ -76,7 +74,6 @@ public class BoxDestroy : MonoBehaviour
         {
             
             Explode();
-            
             //Invoke("boxdestroy", 0.01f);
         }
     }

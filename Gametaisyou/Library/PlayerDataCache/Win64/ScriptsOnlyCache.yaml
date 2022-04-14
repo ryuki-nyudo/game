@@ -17,8 +17,6 @@ ScriptsOnlyBuild:
     - itemScript
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -66,33 +64,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11220}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11250}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 11900}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12380}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12556}
+      Script: {instanceID: 12552}
     - Class: 114
-      Script: {instanceID: 12714}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 12822}
+      Script: {instanceID: 12818}
+    - Class: 114
+      Script: {instanceID: 12858}
+    - Class: 114
+      Script: {instanceID: 12862}
+    - Class: 114
+      Script: {instanceID: 13030}
     - Class: 114
       Script: {instanceID: 13090}
     - Class: 114
@@ -100,6 +104,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13140}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -151,39 +157,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11220}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11250}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11326}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 11900}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 12380}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 12556}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 12714}
-    - Class: 114
-      Script: {instanceID: 12822}
-    - Class: 114
-      Script: {instanceID: 13030}
+      Script: {instanceID: 12862}
     - Class: 114
       Script: {instanceID: 13090}
     - Class: 114
@@ -221,12 +223,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
-  - hash:
-      serializedVersion: 2
-      Hash: 8abd31b3d75491a29be829b8124218d4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Goalitem
   - hash:
       serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
@@ -475,12 +471,6 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: e82588e7297a6cc0e22ca58837ccbd52
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerHPBar
-  - hash:
-      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -511,7 +501,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 1f69e4bc5ebe8fb9b4d7a609a71f004d
+      Hash: e50d6b5245e4546d433ac4a6a502bc63
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -607,10 +597,22 @@ ScriptsOnlyBuild:
     className: Effect
   - hash:
       serializedVersion: 2
+      Hash: 8abd31b3d75491a29be829b8124218d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Goalitem
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 387fdb3ab8067e6acfdd231bda37672e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHPBar
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -748,4 +750,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Game2.unity
   playerPath: "D:/school/\u30C1\u30FC\u30E0\u5236\u4F5C/\u65B0\u3057\u3044\u30D5\u30A9\u30EB\u30C0\u30FC
-    (2)/Gametaisyou.exe"
+    (3)/Gametaisyou.exe"
