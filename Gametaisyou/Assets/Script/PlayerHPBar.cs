@@ -46,7 +46,6 @@ public class PlayerHPBar : MonoBehaviour
     void Start() {
         if (start == 0)
         {
-            Debug.Log(start);
             //現在のHPを最大HPと同じに。
             currentHp = maxHp;
 
@@ -54,7 +53,6 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if(start >= 1)
         {
-            Debug.Log(start);
             initialHp = currentHp;
 
             slider.value = initialHp / maxHp;
