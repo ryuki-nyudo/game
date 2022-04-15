@@ -10,6 +10,7 @@ public class Storn : MonoBehaviour{
     public GameObject Storn2;
 
     public bool Stornbreak;
+    public BoxCollider2D col;
     // Start is called before the first frame update
     void Start(){
         Player = GameObject.Find("player");
@@ -22,15 +23,7 @@ public class Storn : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if(Storn0.activeSelf == false){
-            Storn0Change();
-        }
-        else if(Storn1.activeSelf == false){
-            Storn1Change();
-        }    
-        else if(Storn2.activeSelf == false){
-            Storn2Change();
-        }
+
     }
 
     public void OnCollisionEnter2D(Collision2D other){
@@ -41,16 +34,19 @@ public class Storn : MonoBehaviour{
                     Debug.Log("0");
                     Storn0.SetActive(false);
                     Stornbreak = false;
+                    Storn0Change();
                 }
                 else if(Storn1.activeSelf == true){
                     Debug.Log("1");
                     Storn1.SetActive(false);
                     Stornbreak = false;
+                    Storn1Change();
                 }
                 else if(Storn2.activeSelf == true){
                     Debug.Log("2");
                     Storn2.SetActive(false);
                     Stornbreak = false;
+                    col.enabled = false;
                 }
             }
         }
@@ -64,9 +60,5 @@ public class Storn : MonoBehaviour{
     public void Storn1Change(){
         Storn2.SetActive(true);
         Storn2.transform.position = Storn0.transform.position;
-    }
-
-    public void Storn2Change(){
-
     }
 }
