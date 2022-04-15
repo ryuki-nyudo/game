@@ -216,6 +216,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
+            //キー入力無効＆ノックバック
             nock = true;
             if(nock == true){
                 ntime = 0f;

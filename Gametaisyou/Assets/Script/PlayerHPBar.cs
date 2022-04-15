@@ -9,7 +9,7 @@ public class PlayerHPBar : MonoBehaviour
     float maxHp = 100;
     public static float initialHp;
     public static float currentHp;
-    int recovery = 30;
+    int recovery = 20;
     int damage = 10;
     public static float start;
 
