@@ -1921,6 +1921,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2005,6 +2006,20 @@ Transform:
   m_Father: {fileID: 320428651}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29b9812027c6834f8960fe068b61c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeTime: 0.5
+  shakeRange: {x: 0.2, y: 0.2, z: 0}
 --- !u!1 &522614671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,6 +2668,7 @@ MonoBehaviour:
   nock: 0
   ntime: 0
   nTimer: 0.2
+  AttackEffect: {fileID: 0}
   goalitem: 0
 --- !u!114 &833814998
 MonoBehaviour:
@@ -2666,7 +2682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f1158d3d2125247a81dba39b9ec1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: 0
   slider: {fileID: 1105204011}
   pTime: 0
   timer: 0.5
@@ -2675,6 +2690,7 @@ MonoBehaviour:
   HPcaveat: {fileID: 8300000, guid: d436b3b29fd24dd44a30758526e6e282, type: 3}
   HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
   DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
+  Muteki: {fileID: 0}
   audio: 0
   htimer: 3
   MPtimer: 1
