@@ -221,6 +221,7 @@ public class Player : MonoBehaviour
                 ntime = 0f;
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
+                //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
                 nock = false;
             }        
         }
