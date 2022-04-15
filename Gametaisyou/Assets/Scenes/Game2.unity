@@ -2620,6 +2620,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2705,6 +2706,20 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29b9812027c6834f8960fe068b61c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeTime: 0.5
+  shakeRange: {x: 0.2, y: 0.2, z: 0}
+--- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3733,6 +3748,7 @@ MonoBehaviour:
   HPcaveat: {fileID: 8300000, guid: d436b3b29fd24dd44a30758526e6e282, type: 3}
   HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
   DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
+  Muteki: {fileID: 0}
   audio: 0
   htimer: 5
   MPtimer: 10
@@ -4214,6 +4230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box: {fileID: 0}
   col: {fileID: 0}
+  KAIsyutugen: 0
 --- !u!1 &934360190
 GameObject:
   m_ObjectHideFlags: 0
@@ -7805,6 +7822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box: {fileID: 2079778426}
   col: {fileID: 2079778429}
+  KAIsyutugen: 0
 --- !u!61 &2079778429
 BoxCollider2D:
   m_ObjectHideFlags: 0

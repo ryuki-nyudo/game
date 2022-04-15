@@ -34,20 +34,23 @@ public class itemScript : MonoBehaviour
 
             }
 
-    //    void Update(){
-    //        //item処理
-    //        if (Box.activeSelf == false && ixflag == true)
-    //        {
-    //            iTime = 0f;
-    //            ixflag = false;
-    //            attack.HPflag = false;
-    //            item.gameObject.SetActive(true);
-    //        }
+    //void Update()
+    //{
+    //    //item処理
+    //    if (Box.activeSelf == false && ixflag == true)
+    //    {
+    //        iTime = 0f;
+    //        ixflag = false;
+    //        attack.HPflag = false;
+    //        item.gameObject.SetActive(true);
     //    }
     //}
-    void OnCollisionEnter2D(Collision2D collision) {
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
         //item処理
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Player")
+        {
             if (script.KAIsyutugen == true && ixflag == true)
             {
 
