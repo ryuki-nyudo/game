@@ -3119,7 +3119,8 @@ MonoBehaviour:
   nock: 0
   ntime: 0
   nTimer: 0.2
-  AttackEffect: {fileID: 0}
+  AttackEffect: {fileID: 4381169361509696802, guid: 4350d09e87d319d40af9ee73af04afdf,
+    type: 3}
   goalitem: 0
 --- !u!114 &833814998
 MonoBehaviour:
