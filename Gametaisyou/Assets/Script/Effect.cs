@@ -11,19 +11,16 @@ public class Effect : MonoBehaviour{
 
     public float eTimer = 3.0f;
     public float etime;
-    public bool eflag;
 
     void Start(){
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
         ikasumi.gameObject.SetActive(false);
-        eflag = false;
         etime = 0.0f;
     }
 
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "Player" && player.attackflag == true){
-            eflag = true;
             EEffect();
         }
     }
