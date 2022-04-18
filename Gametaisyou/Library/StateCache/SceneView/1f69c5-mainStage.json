@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":33.25542449951172,"y":-7.670022010803223,"z":1.564062476158142},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":33.65825271606445,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":12.296615600585938,"y":-4.810476779937744,"z":-21.37109375},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":22.956871032714845,"orthographic":true}
->>>>>>> yogi
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":6.919549465179443,"y":-9.367265701293946,"z":-3.057051420211792},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":25.370201110839845,"orthographic":true}
