@@ -216,12 +216,13 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
+            //キー入力無効＆ノックバック
             nock = true;
             if(nock == true){
                 ntime = 0f;
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
-                Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
+                //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
                 nock = false;
             }        
         }
