@@ -123,7 +123,8 @@ public class PlayerHPBar : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "HPitem"/* && timer <= pTime*/){
+        if(other.gameObject.tag == "HPitem" && timer <= pTime)
+        {
             other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
             audioSource.PlayOneShot(HealSE);
