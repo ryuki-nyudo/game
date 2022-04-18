@@ -19,10 +19,6 @@ public class Player : MonoBehaviour
     public Vector3 force = new Vector3(-0.5f, 0.0f, 0.0f);
     private Rigidbody2D rb;
 
-
-    public bool iflag;
-
-   
     public bool attackflag;
     public bool slow;
 
@@ -49,8 +45,6 @@ public class Player : MonoBehaviour
         Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-
-        iflag = false;
 
         attackflag = false;
         slow = false;
@@ -137,7 +131,7 @@ public class Player : MonoBehaviour
 
     public void Accel()
     {
-        if (Input.GetKeyDown(KeyCode.Space) /*&& mpitem.iflag = false*/)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (tap == true)
             {
@@ -145,7 +139,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        //Effect();
+                        Effect();
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -155,12 +149,12 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        //Destroy(AttackEffect);
+                        Destroy(AttackEffect);
                     }
                 }
             }
         }
-        else if (Input.GetKeyDown("joystick button 1") /*&& mpitem.iflag = true*/)
+        else if (Input.GetKeyDown("joystick button 1"))
         {
             if (tap == true)
             {
@@ -168,7 +162,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        //Effect();
+                        Effect();
                         audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
@@ -179,7 +173,7 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        //Destroy(AttackEffect);
+                        Destroy(AttackEffect);
                     }
                 }
             }
@@ -187,29 +181,11 @@ public class Player : MonoBehaviour
         
     }
 
-    //void Update()
-    //{
-
-    //    int kkarisu = script.karisu;
-
-    //    if (kkarisu == 1)
-    //    {
-    //        rb.AddForce(force, ForceMode2D.Impulse);
-    //    }
-
-    //}
     void Decelerate()
     {
-        //if(mpitem.iflag == fasle){
-            speed -= attackspeed;
-            attackflag = false;
-            tap = true;
-        // }
-        // else if(mpitem.iflag == true){
-        //     speed -= 18;
-        //     attackflag = false;
-        //     tap = true;
-        // }
+        speed -= attackspeed;
+        attackflag = false;
+        tap = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
