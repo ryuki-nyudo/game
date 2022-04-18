@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
-using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -14,15 +13,11 @@ public class Player : MonoBehaviour
     //EnemyBehaviourScript script;
 
     float seconds;
-    AudioSource audioSource;
+    AudioSource audioSource; 
     public AudioClip Sound1;
 
     public Vector3 force = new Vector3(-0.5f, 0.0f, 0.0f);
     private Rigidbody2D rb;
-
-
-    public bool iflag;
-
 
     public bool attackflag;
     public bool slow;
@@ -44,15 +39,12 @@ public class Player : MonoBehaviour
     // public GameObject MPitem;
     // MPitem key;
 
-    void Start()
-    {
+    void Start(){
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
         Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-
-        iflag = false;
 
         attackflag = false;
         slow = false;
@@ -67,8 +59,7 @@ public class Player : MonoBehaviour
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
     }
-    void Update()
-    {
+    void Update(){
         ntime += Time.deltaTime;
     }
 
@@ -80,8 +71,7 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-        if (nock == false && ntime >= nTimer)
-        {
+        if(nock == false && ntime >= nTimer){
             //右入力で左向きに動く
             if (horizontal > 0)
             {
@@ -118,7 +108,7 @@ public class Player : MonoBehaviour
             if (currentSt < maxSt)
             {
                 currentSt += 0.09;
-                slider.value = (float)currentSt / (float)maxSt;
+                slider.value = (float)currentSt / (float)maxSt; 
                 if (slow == true)
                 {
                     speed = 1;
@@ -141,7 +131,7 @@ public class Player : MonoBehaviour
 
     public void Accel()
     {
-        if (Input.GetKeyDown(KeyCode.Space) /*&& mpitem.iflag = false*/)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (tap == true)
             {
@@ -149,7 +139,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        //Effect();
+                        Effect();
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -159,12 +149,12 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        //Destroy(AttackEffect);
+                        Destroy(AttackEffect);
                     }
                 }
             }
         }
-        else if (Input.GetKeyDown("joystick button 1") /*&& mpitem.iflag = true*/)
+        else if (Input.GetKeyDown("joystick button 1"))
         {
             if (tap == true)
             {
@@ -172,7 +162,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        //Effect();
+                        Effect();
                         audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
@@ -183,37 +173,19 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        //Destroy(AttackEffect);
+                        Destroy(AttackEffect);
                     }
                 }
             }
         }
-
+        
     }
 
-    //void Update()
-    //{
-
-    //    int kkarisu = script.karisu;
-
-    //    if (kkarisu == 1)
-    //    {
-    //        rb.AddForce(force, ForceMode2D.Impulse);
-    //    }
-
-    //}
     void Decelerate()
     {
-        //if(mpitem.iflag == fasle){
         speed -= attackspeed;
         attackflag = false;
         tap = true;
-        // }
-        // else if(mpitem.iflag == true){
-        //     speed -= 18;
-        //     attackflag = false;
-        //     tap = true;
-        // }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -222,40 +194,26 @@ public class Player : MonoBehaviour
         {
             //キー入力無効＆ノックバック
             nock = true;
-            if (nock == true)
-            {
+            if(nock == true){
                 ntime = 0f;
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
                 nock = false;
-                Shake();
-            }
+            }        
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "goalitem")
-        {
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "goalitem"){
             Destroy(other.gameObject);
             goalitem = true;
         }
     }
 
-    void Effect()
-    {
+    void Effect(){
         Debug.Log("deta");
         GameObject effect = Instantiate(AttackEffect) as GameObject;
         effect.transform.position = gameObject.transform.position;
-    }
-    private void Shake()
-    {
-        Gamepad gamepad = Gamepad.current;
-        if (gamepad != null)
-        {
-            gamepad.SetMotorSpeeds(0.5f, 1.0f);
-            Debug.Log("Shake");
-        }
     }
 }
