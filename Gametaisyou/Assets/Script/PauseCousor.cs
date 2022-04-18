@@ -62,8 +62,8 @@ public class PauseCousor : MonoBehaviour
     {
         if (Pos == 1)
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(0);
+            Scene loadScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(loadScene.name);
             Time.timeScale = 1f;
         }
         else if (Pos == 2)

@@ -9,7 +9,7 @@ public class PlayerHPBar : MonoBehaviour
     float maxHp = 100;
     public static float initialHp;
     public static float currentHp;
-    int recovery = 30;
+    int recovery = 20;
     int damage = 10;
     public static float start;
 
@@ -110,6 +110,7 @@ public class PlayerHPBar : MonoBehaviour
             //int同士の割り算は小数点以下は0になるので、
             //(float)をつけてfloatの変数として振舞わせる。
             slider.value = (float)currentHp / (float)maxHp;
+            Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
         else if (other.gameObject.tag == "enemy" && player.attackflag == true){
             Destroy(other.gameObject);

@@ -31,7 +31,7 @@ public class Goalitem : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" /*&& Player.GetComponent<Player>().goalitem == true*/)
+        if (other.gameObject.tag == "Player" && Player.GetComponent<Player>().goalitem == true)
         {
             audioSource.PlayOneShot(GoalSE);
             Invoke("SceneChange", 1.5f);
