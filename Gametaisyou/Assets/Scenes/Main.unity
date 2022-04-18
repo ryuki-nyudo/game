@@ -636,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
@@ -658,6 +658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: woodbox 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7203193789175572827, guid: f0019350e1c91cf4a8c44e2a22470a6b,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1045684134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0019350e1c91cf4a8c44e2a22470a6b, type: 3}
 --- !u!4 &86881196 stripped
@@ -3111,7 +3116,6 @@ MonoBehaviour:
   attackspeed: 18
   Sound1: {fileID: 8300000, guid: e8c62317f6bfc9242b2089d97e3c7f31, type: 3}
   force: {x: -40, y: 0, z: 0}
-  iflag: 0
   attackflag: 0
   slow: 0
   slider: {fileID: 2053688529}
@@ -3860,10 +3864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b966bed624b584486edc7e0b819178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iTime: 0
-  timer: 0.5
-  jTime: 0
-  iflag: 0
 --- !u!60 &1045684137
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4352,10 +4352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b966bed624b584486edc7e0b819178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iTime: 0
-  timer: 0.5
-  jTime: 0
-  iflag: 0
 --- !u!60 &1144763710
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4962,7 +4958,7 @@ PrefabInstance:
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
@@ -4989,6 +4985,11 @@ PrefabInstance:
       propertyPath: KAIsyutugen
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7203193789175572827, guid: f0019350e1c91cf4a8c44e2a22470a6b,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1144763707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0019350e1c91cf4a8c44e2a22470a6b, type: 3}
 --- !u!4 &1409649524 stripped
@@ -6554,10 +6555,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1470614203820117252}
   - {fileID: 3975701810282327785}
   - {fileID: 534084473}
   - {fileID: 86881196}
+  - {fileID: 1470614203820117252}
   - {fileID: 1144763708}
   - {fileID: 1045684135}
   - {fileID: 1079141803}
@@ -7177,7 +7178,7 @@ Transform:
   m_LocalScale: {x: 0.241, y: 0.244, z: 1}
   m_Children: []
   m_Father: {fileID: 1857941636}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1470614203820117253
 SpriteRenderer:
@@ -7424,10 +7425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b966bed624b584486edc7e0b819178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iTime: 0
-  timer: 0.5
-  jTime: 0
-  iflag: 0
 --- !u!4 &3975701810282327785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
@@ -7494,7 +7491,7 @@ PrefabInstance:
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
@@ -7516,5 +7513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: woodbox 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7203193789175572827, guid: f0019350e1c91cf4a8c44e2a22470a6b,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1470614203820117259}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0019350e1c91cf4a8c44e2a22470a6b, type: 3}
