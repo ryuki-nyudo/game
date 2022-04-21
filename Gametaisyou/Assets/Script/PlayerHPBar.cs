@@ -19,6 +19,8 @@ public class PlayerHPBar : MonoBehaviour
     Player player;
     GameObject Attack;
     Attack attack;
+
+    GameObject Attackflag;
     // GameObject Item;
     // Item item;
 
@@ -33,6 +35,9 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip HealSE;
     public AudioClip DestroySE;
     public AudioClip Muteki;
+    public AudioClip BoxDestroySE;
+    public AudioClip GoalItemSE;
+
     bool hflag;
     public float audio;
     public float htimer = 3.0f;
@@ -57,6 +62,8 @@ public class PlayerHPBar : MonoBehaviour
 
             slider.value = initialHp / maxHp;
         }
+
+        Attackflag = GameObject.Find("player");
 
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
@@ -121,6 +128,19 @@ public class PlayerHPBar : MonoBehaviour
             pTime = 0f;
             HPflag = true;
         }
+
+        //itembox破壊音
+        if (other.gameObject.tag == "itembox" && Attackflag.GetComponent<Player>().attackflag == true)
+        {
+            //Debug.Log("aaaaaaa");
+            audioSource.PlayOneShot(BoxDestroySE);
+        }
+
+        if (other.gameObject.tag == "goalitem")
+        {
+            
+
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
@@ -143,7 +163,15 @@ public class PlayerHPBar : MonoBehaviour
         }
 
         if(other.gameObject.tag == "goal" && player.goalitem == true){
+
+           
             start++;
+        }
+
+        if (other.gameObject.tag == "goalitem")
+        {
+            Debug.Log("aaaaaaa");
+            audioSource.PlayOneShot(GoalItemSE);
         }
     }
 }
