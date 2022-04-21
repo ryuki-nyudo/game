@@ -12,6 +12,7 @@ TagManager:
   - goal
   - itembox
   - goalitem
+  - enemy2
   layers:
   - Default
   - TransparentFX
