@@ -8,6 +8,10 @@ public class Storn : MonoBehaviour{
     public GameObject Storn0;
     public GameObject Storn1;
     public GameObject Storn2;
+    
+    AudioSource audioSource; 
+    public AudioClip break1;
+    public AudioClip break2;
 
     public bool Stornbreak;
     public BoxCollider2D col;
@@ -19,6 +23,8 @@ public class Storn : MonoBehaviour{
         Storn0.SetActive(true);
         Storn1.SetActive(false);
         Storn2.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,12 +40,14 @@ public class Storn : MonoBehaviour{
                     Debug.Log("0");
                     Storn0.SetActive(false);
                     Stornbreak = false;
+                    audioSource.PlayOneShot(break1);
                     Storn0Change();
                 }
                 else if(Storn1.activeSelf == true){
                     Debug.Log("1");
                     Storn1.SetActive(false);
                     Stornbreak = false;
+                    audioSource.PlayOneShot(break1);
                     Storn1Change();
                 }
                 else if(Storn2.activeSelf == true){
@@ -47,6 +55,7 @@ public class Storn : MonoBehaviour{
                     Storn2.SetActive(false);
                     Stornbreak = false;
                     col.enabled = false;
+                    audioSource.PlayOneShot(break2);
                 }
             }
         }
