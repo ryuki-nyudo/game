@@ -30,10 +30,8 @@ public class Player : MonoBehaviour
 
     public float enemypower = 400;
     public bool nock;
-    public float ntime;
-    public float nTimer = 0.5f;
-
-    public GameObject AttackEffect;
+    public float stantime;
+    public float stantimer = 0.5f;
 
     public bool goalitem;
     // public GameObject MPitem;
@@ -60,7 +58,7 @@ public class Player : MonoBehaviour
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
     }
     void Update(){
-        ntime += Time.deltaTime;
+        stantime += Time.deltaTime;
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -71,7 +69,7 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-        if(nock == false && ntime >= nTimer){
+        if(nock == false && stantime >= stantimer){
             //右入力で左向きに動く
             if (horizontal > 0)
             {
@@ -83,8 +81,6 @@ public class Player : MonoBehaviour
             {
                 rb.velocity = new Vector2(-speed, rb.velocity.y);
                 Accel();
-
-
             }
 
             //上入力で上向きに動く
@@ -95,7 +91,6 @@ public class Player : MonoBehaviour
                 Accel();
 
                 //rb.AddForce(force, ForceMode2D.Force);
-
             }
             //下入力で下向きに動く
             else if (vertical < 0)
@@ -139,7 +134,6 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        Effect();
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -149,7 +143,6 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        Destroy(AttackEffect);
                     }
                 }
             }
@@ -162,18 +155,16 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        Effect();
                         audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
                         currentSt = currentSt - move;
 
-                        slider.value = (float)currentSt / (float)maxSt; ;
+                        slider.value = (float)currentSt / (float)maxSt;
                         tap = false;
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        Destroy(AttackEffect);
                     }
                 }
             }
@@ -195,7 +186,7 @@ public class Player : MonoBehaviour
             //キー入力無効＆ノックバック
             nock = true;
             if(nock == true){
-                ntime = 0f;
+                stantime = 0f;
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
@@ -209,11 +200,5 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             goalitem = true;
         }
-    }
-
-    void Effect(){
-        Debug.Log("deta");
-        GameObject effect = Instantiate(AttackEffect) as GameObject;
-        effect.transform.position = gameObject.transform.position;
     }
 }
