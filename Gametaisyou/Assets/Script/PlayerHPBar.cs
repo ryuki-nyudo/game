@@ -119,12 +119,24 @@ public class PlayerHPBar : MonoBehaviour
             slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
+        else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
+        {
+            currentHp = currentHp - damage;
+            audioSource.PlayOneShot(damageSE);
+            slider.value = (float)currentHp / (float)maxHp;
+            Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
+        }
         else if (other.gameObject.tag == "enemy" && player.attackflag == true){
             Destroy(other.gameObject);
             audioSource.PlayOneShot(DestroySE);
         }
+        else if (other.gameObject.tag == "enemy2" && player.attackflag == true)
+        {
+            Destroy(other.gameObject);
+            audioSource.PlayOneShot(DestroySE);
+        }
 
-        if(other.gameObject.tag == "itembox"){
+        if (other.gameObject.tag == "itembox"){
             pTime = 0f;
             HPflag = true;
         }
