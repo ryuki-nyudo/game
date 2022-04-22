@@ -19,8 +19,6 @@ public class PlayerHPBar : MonoBehaviour
     Player player;
     GameObject Attack;
     Attack attack;
-
-    GameObject Attackflag;
     // GameObject Item;
     // Item item;
 
@@ -35,9 +33,6 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip HealSE;
     public AudioClip DestroySE;
     public AudioClip Muteki;
-    public AudioClip BoxDestroySE;
-    public AudioClip GoalItemSE;
-
     bool hflag;
     public float audio;
     public float htimer = 3.0f;
@@ -62,8 +57,6 @@ public class PlayerHPBar : MonoBehaviour
 
             slider.value = initialHp / maxHp;
         }
-
-        Attackflag = GameObject.Find("player");
 
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
@@ -119,45 +112,19 @@ public class PlayerHPBar : MonoBehaviour
             slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
-        else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
-        {
-            currentHp = currentHp - damage;
-            audioSource.PlayOneShot(damageSE);
-            slider.value = (float)currentHp / (float)maxHp;
-            Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
-        }
         else if (other.gameObject.tag == "enemy" && player.attackflag == true){
             Destroy(other.gameObject);
             audioSource.PlayOneShot(DestroySE);
         }
-        else if (other.gameObject.tag == "enemy2" && player.attackflag == true)
-        {
-            Destroy(other.gameObject);
-            audioSource.PlayOneShot(DestroySE);
-        }
 
-        if (other.gameObject.tag == "itembox"){
+        if(other.gameObject.tag == "itembox"){
             pTime = 0f;
             HPflag = true;
-        }
-
-        //itembox破壊音
-        if (other.gameObject.tag == "itembox" && Attackflag.GetComponent<Player>().attackflag == true)
-        {
-            //Debug.Log("aaaaaaa");
-            audioSource.PlayOneShot(BoxDestroySE);
-        }
-
-        if (other.gameObject.tag == "goalitem")
-        {
-            
-
         }
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "HPitem" && timer <= pTime)
-        {
+        if(other.gameObject.tag == "HPitem"/* && timer <= pTime*/){
             other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
             audioSource.PlayOneShot(HealSE);
@@ -167,7 +134,7 @@ public class PlayerHPBar : MonoBehaviour
             }
         }
 
-        if(other.gameObject.tag == "MPitem" && timer <= pTime){
+        if(other.gameObject.tag == "MPitem" /*&& timer <= pTime*/){
             MPflag = true;
             MPtime = 0f;
             player.attackspeed += 36;
@@ -175,15 +142,7 @@ public class PlayerHPBar : MonoBehaviour
         }
 
         if(other.gameObject.tag == "goal" && player.goalitem == true){
-
-           
             start++;
-        }
-
-        if (other.gameObject.tag == "goalitem")
-        {
-            Debug.Log("aaaaaaa");
-            audioSource.PlayOneShot(GoalItemSE);
         }
     }
 }
