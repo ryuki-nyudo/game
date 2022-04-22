@@ -155,7 +155,7 @@ public class PlayerHPBar : MonoBehaviour
             }
         }
 
-        if(other.gameObject.tag == "MPitem" /*&& timer <= pTime*/){
+        if(other.gameObject.tag == "MPitem" && timer <= pTime){
             MPflag = true;
             MPtime = 0f;
             player.attackspeed += 36;
