@@ -19,7 +19,7 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PausePanel.SetActive(false);
+        
     }
 
     // Update is called once per frame
