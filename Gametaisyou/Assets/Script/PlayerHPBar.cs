@@ -19,6 +19,8 @@ public class PlayerHPBar : MonoBehaviour
     Player player;
     GameObject Attack;
     Attack attack;
+
+    GameObject Attackflag;
     // GameObject Item;
     // Item item;
 
@@ -33,6 +35,9 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip HealSE;
     public AudioClip DestroySE;
     public AudioClip Muteki;
+    public AudioClip BoxDestroySE;
+    public AudioClip GoalItemSE;
+
     bool hflag;
     public float audio;
     public float htimer = 3.0f;
@@ -43,7 +48,8 @@ public class PlayerHPBar : MonoBehaviour
 
     public GameObject gameover;
 
-    void Start() {
+    void Start()
+    {
         if (start == 0)
         {
             //現在のHPを最大HPと同じに。
@@ -51,12 +57,14 @@ public class PlayerHPBar : MonoBehaviour
 
             slider.value = 1;
         }
-        else if(start >= 1)
+        else if (start >= 1)
         {
             initialHp = currentHp;
 
             slider.value = initialHp / maxHp;
         }
+
+        Attackflag = GameObject.Find("player");
 
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
@@ -73,35 +81,42 @@ public class PlayerHPBar : MonoBehaviour
         MPflag = false;
     }
 
-    void Update(){
+    void Update()
+    {
         pTime += Time.deltaTime;
         audio += Time.deltaTime;
         MPtime += Time.deltaTime;
 
-        if(MPflag == true && MPtime >= MPtimer){
+        if (MPflag == true && MPtime >= MPtimer)
+        {
             MPflag = false;
             //audioSource.PlayOneShot(Muteki);
             player.attackspeed -= 36;
         }
 
-        if(currentHp <= 30){
+        if (currentHp <= 30)
+        {
             hflag = true;
-            if(hflag == true && audio >= htimer){
+            if (hflag == true && audio >= htimer)
+            {
                 audioSource.PlayOneShot(HPcaveat);
                 audio = 0f;
                 hflag = false;
             }
         }
 
-        if(currentHp <= 0){
+        if (currentHp <= 0)
+        {
             gameover.SetActive(true);
             Time.timeScale = 0f;
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D other){
+    public void OnCollisionEnter2D(Collision2D other)
+    {
         //Enemyタグのオブジェクトに触れると発動
-        if (other.gameObject.tag == "enemy" && player.attackflag == false){
+        if (other.gameObject.tag == "enemy" && player.attackflag == false)
+        {
             //現在のHPからダメージを引く
             currentHp = currentHp - damage;
             audioSource.PlayOneShot(damageSE);
@@ -112,37 +127,78 @@ public class PlayerHPBar : MonoBehaviour
             slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
-        else if (other.gameObject.tag == "enemy" && player.attackflag == true){
+        else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
+        {
+            currentHp = currentHp - damage;
+            audioSource.PlayOneShot(damageSE);
+            slider.value = (float)currentHp / (float)maxHp;
+            Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
+        }
+        else if (other.gameObject.tag == "enemy" && player.attackflag == true)
+        {
+            Destroy(other.gameObject);
+            audioSource.PlayOneShot(DestroySE);
+        }
+        else if (other.gameObject.tag == "enemy2" && player.attackflag == true)
+        {
             Destroy(other.gameObject);
             audioSource.PlayOneShot(DestroySE);
         }
 
-        if(other.gameObject.tag == "itembox"){
+        if (other.gameObject.tag == "itembox")
+        {
             pTime = 0f;
             HPflag = true;
         }
+
+        //itembox破壊音
+        if (other.gameObject.tag == "itembox" && Attackflag.GetComponent<Player>().attackflag == true)
+        {
+            //Debug.Log("aaaaaaa");
+            audioSource.PlayOneShot(BoxDestroySE);
+        }
+
+        if (other.gameObject.tag == "goalitem")
+        {
+
+
+        }
     }
 
-    public void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "HPitem"/* && timer <= pTime*/){
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "HPitem" && timer <= pTime)
+        {
             other.gameObject.SetActive(false);
             currentHp = currentHp + recovery;
             audioSource.PlayOneShot(HealSE);
             slider.value = (float)currentHp / (float)maxHp;
-            if(currentHp > 100){
+            if (currentHp > 100)
+            {
                 currentHp = 100;
             }
         }
 
-        if(other.gameObject.tag == "MPitem" /*&& timer <= pTime*/){
+        if (other.gameObject.tag == "MPitem" && timer <= pTime)
+        {
+            other.gameObject.SetActive(false);
             MPflag = true;
             MPtime = 0f;
             player.attackspeed += 36;
-            other.gameObject.SetActive(false);
+            
         }
 
-        if(other.gameObject.tag == "goal" && player.goalitem == true){
+        if (other.gameObject.tag == "goal" && player.goalitem == true)
+        {
+
+
             start++;
+        }
+
+        if (other.gameObject.tag == "goalitem")
+        {
+            Debug.Log("aaaaaaa");
+            audioSource.PlayOneShot(GoalItemSE);
         }
     }
 }

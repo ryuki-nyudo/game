@@ -1,7 +1,682 @@
 fileFormatVersion: 2
 guid: 363e31a50f1d5344d834efbb76547776
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3395856866206217572
+    second: brain_0
+  - first:
+      213: 3307449931778576108
+    second: brain_1
+  - first:
+      213: 1131640189482316686
+    second: brain_2
+  - first:
+      213: -7504862931619841524
+    second: brain_3
+  - first:
+      213: 8651078712007710132
+    second: brain_4
+  - first:
+      213: 3329612200920646961
+    second: brain_5
+  - first:
+      213: -1680212014504192592
+    second: brain_6
+  - first:
+      213: -8340273251156022249
+    second: brain_7
+  - first:
+      213: -7274775439164006617
+    second: brain_8
+  - first:
+      213: 9054059877963984286
+    second: brain_9
+  - first:
+      213: 1035117563142214691
+    second: brain_10
+  - first:
+      213: 7158706567822642377
+    second: brain_11
+  - first:
+      213: -8683492851699971170
+    second: brain_12
+  - first:
+      213: 4558345719668545999
+    second: brain_13
+  - first:
+      213: -7068148318104164420
+    second: brain_14
+  - first:
+      213: -4553470801670610602
+    second: brain_15
+  - first:
+      213: 1776536762780338521
+    second: brain_16
+  - first:
+      213: 7440223162168929614
+    second: brain_17
+  - first:
+      213: -1467819199197518891
+    second: brain_18
+  - first:
+      213: -3798092595366480312
+    second: brain_19
+  - first:
+      213: 8934994387238068385
+    second: brain_20
+  - first:
+      213: 3122659815437918402
+    second: brain_21
+  - first:
+      213: 5523814810269778327
+    second: brain_22
+  - first:
+      213: 307859508123937394
+    second: brain_23
+  - first:
+      213: 4298586851488654497
+    second: brain_24
+  - first:
+      213: -6184873918854620970
+    second: brain_25
+  - first:
+      213: -1064815008763299756
+    second: brain_26
+  - first:
+      213: 7219489051430215254
+    second: brain_27
+  - first:
+      213: 5369502812865933951
+    second: brain_28
+  - first:
+      213: -3766311252430612103
+    second: brain_29
+  - first:
+      213: 2456602010594679482
+    second: brain_30
+  - first:
+      213: 5360004137741759075
+    second: brain_31
+  - first:
+      213: -4896589921692340334
+    second: brain_32
+  - first:
+      213: 3244148982336817562
+    second: brain_33
+  - first:
+      213: -5930052025829388879
+    second: brain_34
+  - first:
+      213: 8960287498346359647
+    second: brain_35
+  - first:
+      213: -3562294613374064037
+    second: brain_36
+  - first:
+      213: -4630138503306176394
+    second: brain_37
+  - first:
+      213: 7955803567748583669
+    second: brain_38
+  - first:
+      213: 768276758263073226
+    second: brain_39
+  - first:
+      213: 5757345322384717602
+    second: brain_40
+  - first:
+      213: 4364755926004128168
+    second: brain_41
+  - first:
+      213: 1827141605057558699
+    second: brain_42
+  - first:
+      213: 7683140833126926478
+    second: brain_43
+  - first:
+      213: -8010216730331074600
+    second: brain_44
+  - first:
+      213: -8958413587637557119
+    second: brain_45
+  - first:
+      213: -5522029938617266272
+    second: brain_46
+  - first:
+      213: -4459554650827565183
+    second: brain_47
+  - first:
+      213: -6587304067987464471
+    second: brain_48
+  - first:
+      213: 7165513922655747670
+    second: brain_49
+  - first:
+      213: -4038868368867861986
+    second: brain_50
+  - first:
+      213: 4217382136614609772
+    second: brain_51
+  - first:
+      213: -7317475668189166260
+    second: brain_52
+  - first:
+      213: -7136831376709924129
+    second: brain_53
+  - first:
+      213: 8410370777863623498
+    second: brain_54
+  - first:
+      213: 2647208870689239751
+    second: brain_55
+  - first:
+      213: -5083616878139315533
+    second: brain_56
+  - first:
+      213: 4971827124872650670
+    second: brain_57
+  - first:
+      213: 6470726049559224778
+    second: brain_58
+  - first:
+      213: 7649677207819426804
+    second: brain_59
+  - first:
+      213: 5688061407439761492
+    second: brain_60
+  - first:
+      213: 7032618359182690843
+    second: brain_61
+  - first:
+      213: 3853017913178292571
+    second: brain_62
+  - first:
+      213: 3383285467330814494
+    second: brain_63
+  - first:
+      213: -8614606306894141268
+    second: brain_64
+  - first:
+      213: -6803487767547772015
+    second: brain_65
+  - first:
+      213: -5691015128002722848
+    second: brain_66
+  - first:
+      213: -1636943769647774513
+    second: brain_67
+  - first:
+      213: 4341575853762001721
+    second: brain_68
+  - first:
+      213: 5982261383918349851
+    second: brain_69
+  - first:
+      213: 6848408355279059676
+    second: brain_70
+  - first:
+      213: 6216352559202919887
+    second: brain_71
+  - first:
+      213: -1444958411744013218
+    second: brain_72
+  - first:
+      213: -4186388604224073095
+    second: brain_73
+  - first:
+      213: -8284704068622934294
+    second: brain_74
+  - first:
+      213: 5242348418690713421
+    second: brain_75
+  - first:
+      213: -2547709684697741016
+    second: brain_76
+  - first:
+      213: 6049338793417889914
+    second: brain_77
+  - first:
+      213: 5317615090517234310
+    second: brain_78
+  - first:
+      213: 3679096640472653841
+    second: brain_79
+  - first:
+      213: -7543314759742921047
+    second: brain_80
+  - first:
+      213: -8656430837271016287
+    second: brain_81
+  - first:
+      213: -6753346401525276208
+    second: brain_82
+  - first:
+      213: 8458280640689102000
+    second: brain_83
+  - first:
+      213: 9170016800523558894
+    second: brain_84
+  - first:
+      213: -5672199580576510686
+    second: brain_85
+  - first:
+      213: 3704346864931011620
+    second: brain_86
+  - first:
+      213: 9139861713800801274
+    second: brain_87
+  - first:
+      213: 8591548591942415144
+    second: brain_88
+  - first:
+      213: -8054119756316059083
+    second: brain_89
+  - first:
+      213: -8884806016340230337
+    second: brain_90
+  - first:
+      213: 7475985997872439635
+    second: brain_91
+  - first:
+      213: -7938171416690737291
+    second: brain_92
+  - first:
+      213: -5786094014088634341
+    second: brain_93
+  - first:
+      213: 735400211311104240
+    second: brain_94
+  - first:
+      213: 6482600360180705982
+    second: brain_95
+  - first:
+      213: 9014090741272995639
+    second: brain_96
+  - first:
+      213: -2822016398376960
+    second: brain_97
+  - first:
+      213: 608330479725538615
+    second: brain_98
+  - first:
+      213: 728638629425729714
+    second: brain_99
+  - first:
+      213: -5385203182062701596
+    second: brain_100
+  - first:
+      213: 1767476978824187736
+    second: brain_101
+  - first:
+      213: -7799366133669859102
+    second: brain_102
+  - first:
+      213: -3049009802761596158
+    second: brain_103
+  - first:
+      213: 152946983057232004
+    second: brain_104
+  - first:
+      213: -1207012429748148996
+    second: brain_105
+  - first:
+      213: -8507278574908125014
+    second: brain_106
+  - first:
+      213: 1305676664014235941
+    second: brain_107
+  - first:
+      213: 2457207999075238876
+    second: brain_108
+  - first:
+      213: 267438790915967738
+    second: brain_109
+  - first:
+      213: -4400231232108721100
+    second: brain_110
+  - first:
+      213: 9094028638881453070
+    second: brain_111
+  - first:
+      213: -817282491570598985
+    second: brain_112
+  - first:
+      213: -1220792149991360555
+    second: brain_113
+  - first:
+      213: -3251346404275551439
+    second: brain_114
+  - first:
+      213: -2613001534994845821
+    second: brain_115
+  - first:
+      213: 8061626095458410994
+    second: brain_116
+  - first:
+      213: -7139599523018875547
+    second: brain_117
+  - first:
+      213: 209982136658746425
+    second: brain_118
+  - first:
+      213: 4659960454112484769
+    second: brain_119
+  - first:
+      213: 7486507875777713990
+    second: brain_120
+  - first:
+      213: -8429084510062469243
+    second: brain_121
+  - first:
+      213: 6855148495173360293
+    second: brain_122
+  - first:
+      213: -1436002747054288149
+    second: brain_123
+  - first:
+      213: 3315616750777376873
+    second: brain_124
+  - first:
+      213: 7125523482846606398
+    second: brain_125
+  - first:
+      213: 3666720464013639554
+    second: brain_126
+  - first:
+      213: -4074809995492837084
+    second: brain_127
+  - first:
+      213: -1167237803019242812
+    second: brain_128
+  - first:
+      213: -6728863789159053377
+    second: brain_129
+  - first:
+      213: -201807136704977218
+    second: brain_130
+  - first:
+      213: -5626414627724853156
+    second: brain_131
+  - first:
+      213: 1714724575647827786
+    second: brain_132
+  - first:
+      213: 2754183225253572323
+    second: brain_133
+  - first:
+      213: 9193764193726647637
+    second: brain_134
+  - first:
+      213: 4718312541990854085
+    second: brain_135
+  - first:
+      213: 8555220900800028152
+    second: brain_136
+  - first:
+      213: 6952130556232508392
+    second: brain_137
+  - first:
+      213: 4538725787025008488
+    second: brain_138
+  - first:
+      213: -1382787616703410421
+    second: brain_139
+  - first:
+      213: -2254545327786014740
+    second: brain_140
+  - first:
+      213: 6207348031377066261
+    second: brain_141
+  - first:
+      213: 235993564620920411
+    second: brain_142
+  - first:
+      213: 3414923873612340951
+    second: brain_143
+  - first:
+      213: 4081480914414102083
+    second: brain_144
+  - first:
+      213: -5750148714587802684
+    second: brain_145
+  - first:
+      213: 1774361285732957542
+    second: brain_146
+  - first:
+      213: 8421792345378302713
+    second: brain_147
+  - first:
+      213: 786906812185501270
+    second: brain_148
+  - first:
+      213: 717631476099045028
+    second: brain_149
+  - first:
+      213: 5390823295873573853
+    second: brain_150
+  - first:
+      213: -2913449611337551773
+    second: brain_151
+  - first:
+      213: 8522350611311221343
+    second: brain_152
+  - first:
+      213: 31382936334074005
+    second: brain_153
+  - first:
+      213: 3284126339081843305
+    second: brain_154
+  - first:
+      213: -6812988053776649023
+    second: brain_155
+  - first:
+      213: -8426501526408361328
+    second: brain_156
+  - first:
+      213: -5271899384726853277
+    second: brain_157
+  - first:
+      213: -5695498301464667013
+    second: brain_158
+  - first:
+      213: -4897490208401020229
+    second: brain_159
+  - first:
+      213: 1420766267050302175
+    second: brain_160
+  - first:
+      213: -3529474983423686218
+    second: brain_161
+  - first:
+      213: -1102906747955285094
+    second: brain_162
+  - first:
+      213: -4585860392648228783
+    second: brain_163
+  - first:
+      213: -4183262487251437621
+    second: brain_164
+  - first:
+      213: 8681569654538434386
+    second: brain_165
+  - first:
+      213: -2361112406857274426
+    second: brain_166
+  - first:
+      213: 4058992182844839795
+    second: brain_167
+  - first:
+      213: -7732397416125399568
+    second: brain_168
+  - first:
+      213: 1027668495883982531
+    second: brain_169
+  - first:
+      213: -348853248331928247
+    second: brain_170
+  - first:
+      213: -4166589082463309342
+    second: brain_171
+  - first:
+      213: 4394725406727535940
+    second: brain_172
+  - first:
+      213: 2770861496120262741
+    second: brain_173
+  - first:
+      213: -5721221181420652056
+    second: brain_174
+  - first:
+      213: -3505267713621907657
+    second: brain_175
+  - first:
+      213: 2410611816617151127
+    second: brain_176
+  - first:
+      213: -3171194657101651077
+    second: brain_177
+  - first:
+      213: 3747928032235354671
+    second: brain_178
+  - first:
+      213: -8494371088204275681
+    second: brain_179
+  - first:
+      213: 2177949383903552028
+    second: brain_180
+  - first:
+      213: -4379263896809309021
+    second: brain_181
+  - first:
+      213: 6522646393142958252
+    second: brain_182
+  - first:
+      213: -1914793194695092568
+    second: brain_183
+  - first:
+      213: 3886837487218623323
+    second: brain_184
+  - first:
+      213: 9217024820439378507
+    second: brain_185
+  - first:
+      213: 1320970727229127031
+    second: brain_186
+  - first:
+      213: 3945904296124541192
+    second: brain_187
+  - first:
+      213: 8281699832223898481
+    second: brain_188
+  - first:
+      213: -1495162868402656383
+    second: brain_189
+  - first:
+      213: -8504782918978077475
+    second: brain_190
+  - first:
+      213: -7685182134791579037
+    second: brain_191
+  - first:
+      213: 7569935442341968525
+    second: brain_192
+  - first:
+      213: 2124010306357229870
+    second: brain_193
+  - first:
+      213: 5430753941981396446
+    second: brain_194
+  - first:
+      213: -3184959051376058218
+    second: brain_195
+  - first:
+      213: -3777757568981698548
+    second: brain_196
+  - first:
+      213: -4225645805115750391
+    second: brain_197
+  - first:
+      213: -5847503146143751203
+    second: brain_198
+  - first:
+      213: 8356170839479580394
+    second: brain_199
+  - first:
+      213: -3161471431177633206
+    second: brain_200
+  - first:
+      213: 7822326343273380370
+    second: brain_201
+  - first:
+      213: -5792521670257132571
+    second: brain_202
+  - first:
+      213: -1115675910058742079
+    second: brain_203
+  - first:
+      213: 7335709821018029558
+    second: brain_204
+  - first:
+      213: -1272430265918366435
+    second: brain_205
+  - first:
+      213: 1407411072098333066
+    second: brain_206
+  - first:
+      213: 377587438331382015
+    second: brain_207
+  - first:
+      213: 1004436731486028412
+    second: brain_208
+  - first:
+      213: -7846488354031223318
+    second: brain_209
+  - first:
+      213: 2795590096750926981
+    second: brain_210
+  - first:
+      213: -7755375586663545478
+    second: brain_211
+  - first:
+      213: 8457395810884557213
+    second: brain_212
+  - first:
+      213: 7178287385582023595
+    second: brain_213
+  - first:
+      213: -5612901242387654999
+    second: brain_214
+  - first:
+      213: -4880348378380376905
+    second: brain_215
+  - first:
+      213: -4418603238017164203
+    second: brain_216
+  - first:
+      213: 2571077111041075779
+    second: brain_217
+  - first:
+      213: -5780307621282095259
+    second: brain_218
+  - first:
+      213: 7234063577459476428
+    second: brain_219
+  - first:
+      213: 5703645732801661458
+    second: brain_220
+  - first:
+      213: 2588848034916058860
+    second: brain_221
+  - first:
+      213: -1506498443515571164
+    second: brain_222
+  - first:
+      213: -7700667144436903465
+    second: brain_223
+  - first:
+      213: -766861041225060290
+    second: brain_224
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +715,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +745,546 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: brain_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a05b51c2e7fd0d0800000000000000
+      internalID: -3395856866206217572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 144
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee4d08703c66ed20800000000000000
+      internalID: 3307449931778576108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 144
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8336a3b1c464bf00800000000000000
+      internalID: 1131640189482316686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 144
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a7dc81dee59d790800000000000000
+      internalID: -7504862931619841524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5d921d04ece0870800000000000000
+      internalID: 8651078712007710132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1358eabd7a8253e20800000000000000
+      internalID: 3329612200920646961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 108
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b552203310bea8e0800000000000000
+      internalID: -1680212014504192592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 108
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c272faaa5614c80800000000000000
+      internalID: -8340273251156022249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_8
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 108
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f94ef084eca0b90800000000000000
+      internalID: -7274775439164006617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 108
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9de8211d7b76ad70800000000000000
+      internalID: 9054059877963984286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3241cdb70f97d5e00800000000000000
+      internalID: 1035117563142214691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 72
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc035ae1b5d85360800000000000000
+      internalID: 7158706567822642377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b87cc22490e7780800000000000000
+      internalID: -8683492851699971170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_13
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 72
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc91448e74f724f30800000000000000
+      internalID: 4558345719668545999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 72
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb760a7ad84e8ed90800000000000000
+      internalID: -7068148318104164420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6516f436e62dec0c0800000000000000
+      internalID: -4553470801670610602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959c1f3f5c687a810800000000000000
+      internalID: 1776536762780338521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 36
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d66b6cb8bf04760800000000000000
+      internalID: 7440223162168929614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 36
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d36555173241abe0800000000000000
+      internalID: -1467819199197518891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 36
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846b32d58e67a4bc0800000000000000
+      internalID: -3798092595366480312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a02f693e0a7ffb70800000000000000
+      internalID: 8934994387238068385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0609dbe8ae55b20800000000000000
+      internalID: 3122659815437918402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7910c23bd4888ac40800000000000000
+      internalID: 5523814810269778327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a247e679cb54400800000000000000
+      internalID: 307859508123937394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brain_24
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4652f67f5a7ab30800000000000000
+      internalID: 4298586851488654497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
