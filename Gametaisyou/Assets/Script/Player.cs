@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     //EnemyBehaviourScript script;
 
     float seconds;
-    AudioSource audioSource; 
+    AudioSource audioSource;
     public AudioClip Sound1;
 
     public Vector3 force = new Vector3(-0.5f, 0.0f, 0.0f);
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     public bool iflag;
 
-   
+
     public bool attackflag;
     public bool slow;
 
@@ -44,7 +44,8 @@ public class Player : MonoBehaviour
     // public GameObject MPitem;
     // MPitem key;
 
-    void Start(){
+    void Start()
+    {
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
         Application.targetFrameRate = 60;
@@ -67,7 +68,8 @@ public class Player : MonoBehaviour
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
     }
-    void Update(){
+    void Update()
+    {
         ntime += Time.deltaTime;
     }
 
@@ -79,7 +81,8 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
 
-        if(nock == false && ntime >= nTimer){
+        if (nock == false && ntime >= nTimer)
+        {
             //右入力で左向きに動く
             if (horizontal > 0)
             {
@@ -116,7 +119,7 @@ public class Player : MonoBehaviour
             if (currentSt < maxSt)
             {
                 currentSt += 0.09;
-                slider.value = (float)currentSt / (float)maxSt; 
+                slider.value = (float)currentSt / (float)maxSt;
                 if (slow == true)
                 {
                     speed = 1;
@@ -186,7 +189,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
     //void Update()
@@ -203,9 +206,9 @@ public class Player : MonoBehaviour
     void Decelerate()
     {
         //if(mpitem.iflag == fasle){
-            speed -= attackspeed;
-            attackflag = false;
-            tap = true;
+        speed -= attackspeed;
+        attackflag = false;
+        tap = true;
         // }
         // else if(mpitem.iflag == true){
         //     speed -= 18;
@@ -220,18 +223,21 @@ public class Player : MonoBehaviour
         {
             //キー入力無効＆ノックバック
             nock = true;
-            if(nock == true){
+            if (nock == true)
+            {
                 ntime = 0f;
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
                 nock = false;
-            }        
+            }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag == "goalitem"){
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "goalitem")
+        {
             goaliEffect.transform.position = other.transform.position;
             goaliEffect.Play();
             //other.gameObject.SetActive(false);
@@ -240,7 +246,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Effect(){
+    void Effect()
+    {
         Debug.Log("deta");
         GameObject effect = Instantiate(AttackEffect) as GameObject;
         effect.transform.position = gameObject.transform.position;
