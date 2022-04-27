@@ -228,6 +228,19 @@ public class Player : MonoBehaviour
                 nock = false;
             }        
         }
+        if (collision.gameObject.tag == "enemy2")
+        {
+            //キー入力無効＆ノックバック
+            nock = true;
+            if (nock == true)
+            {
+                ntime = 0f;
+                Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
+                rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
+                //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
+                Invoke("mahi", 1.5f);
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -244,5 +257,10 @@ public class Player : MonoBehaviour
         Debug.Log("deta");
         GameObject effect = Instantiate(AttackEffect) as GameObject;
         effect.transform.position = gameObject.transform.position;
+    }
+
+    void mahi()
+    {
+        nock = false;
     }
 }
