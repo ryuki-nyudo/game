@@ -76,7 +76,6 @@ public class BoxDestroy : MonoBehaviour
         {
             
             Explode();
-            //Invoke("boxdestroy", 0.01f);
         }
     }
 }
