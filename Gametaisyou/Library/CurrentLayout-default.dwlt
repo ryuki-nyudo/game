@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 126
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 91
+  controlID: 57
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 70
+  controlID: 58
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script
+    - Assets/image/bloack
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script
+  - Assets/image/bloack
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "C:\\Users\\kbc12006174\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\game\\Gametaisyou"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14380000
-    m_LastClickedID: 14356
-    m_ExpandedIDs: 00000000fa370000fc37000000ca9a3b
+    scrollPos: {x: 0, y: 21}
+    m_SelectedIDs: 1a380000
+    m_LastClickedID: 14362
+    m_ExpandedIDs: 000000000a3800000c3800001838000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa370000fc370000
+    m_ExpandedIDs: 000000000a3800000c380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 115
+  m_DirectoriesAreaWidth: 278
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -472,7 +472,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 117
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -501,10 +501,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 84360000
-      m_LastClickedID: 13956
-      m_ExpandedIDs: fcf3ffff04f4ffff6efbffff303500006636000084360000
+      scrollPos: {x: 0, y: 189}
+      m_SelectedIDs: 4c3e0000
+      m_LastClickedID: 15948
+      m_ExpandedIDs: d0f4ffff2afaffff64fbffff863d00009e3d0000ee3d0000723e0000263f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1368, y: 210.60016, z: 0}
+    m_Target: {x: 41.577545, y: -5.3018146, z: -8.509766}
     speed: 2
-    m_Value: {x: 1368, y: 210.60016, z: 0}
+    m_Value: {x: 41.577545, y: -5.3018146, z: -8.509766}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5351.0576
+    m_Target: 12.151672
     speed: 2
-    m_Value: 5351.0576
+    m_Value: 12.151672
   m_Ortho:
     m_Target: 1
     speed: 2
