@@ -790,7 +790,7 @@ PrefabInstance:
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
@@ -812,6 +812,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: woodbox 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7203193789175572827, guid: f0019350e1c91cf4a8c44e2a22470a6b,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1045684134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0019350e1c91cf4a8c44e2a22470a6b, type: 3}
 --- !u!4 &86881196 stripped
@@ -1785,8 +1790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 444205803}
-  StornOutTime: 0
-  StornTimer: 1
 --- !u!61 &444205805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2702,8 +2705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 645414808}
-  StornOutTime: 0
-  StornTimer: 1
 --- !u!4 &645414811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1541495576871084505, guid: 690eb85209ac3184ca8f62b116cbf382,
@@ -3216,6 +3217,8 @@ MonoBehaviour:
   HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
   DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
   Muteki: {fileID: 0}
+  BoxDestroySE: {fileID: 0}
+  GoalItemSE: {fileID: 0}
   audio: 0
   htimer: 3
   MPtimer: 1
@@ -8797,8 +8800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 910400859}
-  StornOutTime: 0
-  StornTimer: 1
 --- !u!4 &910400862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2166655581531561659, guid: 087e1eef178dbdd48bb8060a54d49454,
@@ -9015,8 +9016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 1005093166}
-  StornOutTime: 0
-  StornTimer: 1
 --- !u!4 &1005093169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4370827742072756324, guid: df698e988aa908c43a044fdb4f814a36,
@@ -9404,8 +9403,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   box: {fileID: 1052602107}
-  StornOutTime: 0
-  StornTimer: 1
 --- !u!1001 &1058515067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10215,7 +10212,7 @@ PrefabInstance:
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
@@ -10242,6 +10239,11 @@ PrefabInstance:
       propertyPath: KAIsyutugen
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7203193789175572827, guid: f0019350e1c91cf4a8c44e2a22470a6b,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1144763707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0019350e1c91cf4a8c44e2a22470a6b, type: 3}
 --- !u!4 &1409649524 stripped
@@ -10899,7 +10901,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ff364bc900b7ba645b18de9f5f28a99d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12163,10 +12165,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1470614203820117252}
   - {fileID: 3975701810282327785}
   - {fileID: 534084473}
   - {fileID: 86881196}
+  - {fileID: 1470614203820117252}
   - {fileID: 1144763708}
   - {fileID: 1045684135}
   - {fileID: 1079141803}
@@ -12935,11 +12937,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470614203820117259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.28, y: -0.08, z: 3.1911404}
+  m_LocalPosition: {x: 13.08, y: -0.08, z: 3.1911404}
   m_LocalScale: {x: 0.241, y: 0.244, z: 1}
   m_Children: []
   m_Father: {fileID: 1857941636}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1470614203820117253
 SpriteRenderer:
@@ -13340,7 +13342,7 @@ PrefabInstance:
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
         type: 3}
@@ -13362,6 +13364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: woodbox 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7203193789175572827, guid: f0019350e1c91cf4a8c44e2a22470a6b,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1470614203820117259}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0019350e1c91cf4a8c44e2a22470a6b, type: 3}
 --- !u!82 &8909536207842704281
