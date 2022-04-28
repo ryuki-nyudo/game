@@ -10,6 +10,7 @@ public class BosScript : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float _length = 1;
     private Vector3 pos;
+    public float speed;
 
 
     void Start()
@@ -50,6 +51,8 @@ public class BosScript : MonoBehaviour
         //// x.y座標を往復させて上下運動させる
         //transform.localPosition = new Vector3(-value, value, 0);
 
-        transform.position = new Vector2(pos.x - Mathf.PingPong(Time.time, _length), pos.y + Mathf.PingPong(Time.time, _length));
+        //transform.position = new Vector2(pos.x, speed);
+
+        rb.velocity = new Vector2(rb.velocity.x, speed);
     }
 }
