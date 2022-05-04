@@ -1,7 +1,115 @@
 fileFormatVersion: 2
 guid: 6d17bc3a17606f04187a32fa7fbcbfa4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1214796946054389044
+    second: storn2_0
+  - first:
+      213: -558515608728774328
+    second: storn2_1
+  - first:
+      213: 8594490336331735854
+    second: storn2_2
+  - first:
+      213: -6186020798066371082
+    second: storn2_3
+  - first:
+      213: -8368224864794033887
+    second: storn2_4
+  - first:
+      213: 8917137113096090361
+    second: storn2_5
+  - first:
+      213: -3054280800979284724
+    second: storn2_6
+  - first:
+      213: 5338526074999999284
+    second: storn2_7
+  - first:
+      213: 6056587844996044195
+    second: storn2_8
+  - first:
+      213: -418198543043858578
+    second: storn2_9
+  - first:
+      213: -3121752225529784171
+    second: storn2_10
+  - first:
+      213: -3851174836112396923
+    second: storn2_11
+  - first:
+      213: 6824057995654368469
+    second: storn2_12
+  - first:
+      213: -5380426388478074600
+    second: storn2_13
+  - first:
+      213: -5191514029651603344
+    second: storn2_14
+  - first:
+      213: 6060299758296073881
+    second: storn2_15
+  - first:
+      213: -8600057209300438703
+    second: storn2_16
+  - first:
+      213: 3963929713071783439
+    second: storn2_17
+  - first:
+      213: 7969830786171418302
+    second: storn2_18
+  - first:
+      213: -5280061591748543752
+    second: storn2_19
+  - first:
+      213: -1572809307990462156
+    second: storn2_20
+  - first:
+      213: -2692545786270047280
+    second: storn2_21
+  - first:
+      213: -7655770382166095334
+    second: storn2_22
+  - first:
+      213: -82442282522628376
+    second: storn2_23
+  - first:
+      213: 1608850054710031338
+    second: storn2_24
+  - first:
+      213: -508814117085048990
+    second: storn2_25
+  - first:
+      213: 6207032801329374017
+    second: storn2_26
+  - first:
+      213: 5156800999366400820
+    second: storn2_27
+  - first:
+      213: -4046293434076346700
+    second: storn2_28
+  - first:
+      213: 5448652869948236656
+    second: storn2_29
+  - first:
+      213: 7315926594455643490
+    second: storn2_30
+  - first:
+      213: 232717385404980192
+    second: storn2_31
+  - first:
+      213: 2297250191378399996
+    second: storn2_32
+  - first:
+      213: 3293476515519660072
+    second: storn2_33
+  - first:
+      213: 5284460962373594949
+    second: storn2_34
+  - first:
+      213: -8958611620155263111
+    second: storn2_35
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -84,7 +192,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: storn2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2e2342d9c242fe0800000000000000
+      internalID: -1214796946054389044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 135
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849d5345301cf38f0800000000000000
+      internalID: -558515608728774328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 135
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23a492ec63c54770800000000000000
+      internalID: 8594490336331735854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 135
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5531eebd6d62aa0800000000000000
+      internalID: -6186020798066371082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1214c5d72d71edb80800000000000000
+      internalID: -8368224864794033887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 90
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f27b8795f800cb70800000000000000
+      internalID: 8917137113096090361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d85553bc30d95d0800000000000000
+      internalID: -3054280800979284724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_7
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 90
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b09843e21461a40800000000000000
+      internalID: 5338526074999999284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a510fb4e825d0450800000000000000
+      internalID: 6056587844996044195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 45
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fe84c04a2423af0800000000000000
+      internalID: -418198543043858578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_10
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 45
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598138004ee4da4d0800000000000000
+      internalID: -3121752225529784171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_11
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 45
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58de89514e0ed8ac0800000000000000
+      internalID: -3851174836112396923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc84a5779ce3be50800000000000000
+      internalID: 6824057995654368469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81160a6d4b2e455b0800000000000000
+      internalID: -5380426388478074600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_14
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070d820fe7904f7b0800000000000000
+      internalID: -5191514029651603344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: storn2_15
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9968f9575828a1450800000000000000
+      internalID: 6060299758296073881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

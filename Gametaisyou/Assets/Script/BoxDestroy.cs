@@ -13,7 +13,21 @@ public class BoxDestroy : MonoBehaviour
 
     public bool KAIsyutugen = false; //コライダーが消えたら貝を出現させるための判定
 
-    // Start is called before the first frame update
+
+
+
+    GameObject Attack;
+    Attack attack;
+
+    public float iTime;
+    public float timer = 0.5f;
+    public float jTime;
+    public bool iflag = false;
+    public GameObject Box;
+    public GameObject item;
+    public bool ixflag;
+
+
     public void Start()
     {
         Attackflag = GameObject.Find("player");
@@ -28,31 +42,24 @@ public class BoxDestroy : MonoBehaviour
             // 子要素リストにパーツを追加
             myParts.Add(child.gameObject);
         }
+
+
+        Attack = GameObject.Find("player");
+        attack = Attack.GetComponent<Attack>();
+        item.gameObject.SetActive(false);
+        ixflag = true;
+
+
     }
 
-    // Update is called once per frame
-    //public void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-           
-    //    }
-    //}
-
-    //void boxdestroy()
-    //{
-    //    Destroy(this.gameObject);
-    //    box.SetActive(false);
-    //    Debug.Log("けした");
-    //}
 
     public void Explode()
     {
-        Debug.Log("huttonnda");
+
         // 各パーツをふっとばす
         foreach (GameObject obj in myParts)
         {
-            
+
             // 飛ばすパワーと回転をランダムに設定
             Vector2 forcePower = new Vector2(Random.Range(-10, 10), Random.Range(-10, 10));
             float torquePower = Random.Range(-10, 10);
@@ -63,10 +70,10 @@ public class BoxDestroy : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddTorque(torquePower, ForceMode2D.Impulse);
 
 
-            
+
             col.enabled = false;　//コライダーを消す
-            KAIsyutugen = true;　　　//貝を出現させる
-            　
+            KAIsyutugen = true;   //貝を出現させる
+
         }
     }
 
@@ -74,9 +81,18 @@ public class BoxDestroy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && Attackflag.GetComponent<Player>().attackflag == true)
         {
-            
+
             Explode();
-            //Invoke("boxdestroy", 0.01f);
+            if (KAIsyutugen == true && ixflag == true)
+            {
+                Debug.Log("!!!!!!");
+                item.gameObject.SetActive(true);
+                iTime = 0f;
+                ixflag = false;
+                attack.HPflag = false;
+
+            }
+
         }
     }
 }
