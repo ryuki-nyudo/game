@@ -13,6 +13,7 @@ TagManager:
   - itembox
   - goalitem
   - enemy2
+  - goalitem2
   layers:
   - Default
   - TransparentFX

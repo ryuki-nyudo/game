@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
     public float ntime;
     public float nTimer = 0.5f;
 
+    public int Goalflag;
+
     [SerializeField] public ParticleSystem AttackEffect;
 
     public bool goalitem;
@@ -64,6 +66,8 @@ public class Player : MonoBehaviour
         goalitem = false;
 
         AttackEffect.Stop();
+
+        Goalflag = 0;
 
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
@@ -236,6 +240,16 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "goalitem"){
+            Goalflag = 1;
+            goaliEffect.transform.position = other.transform.position;
+            goaliEffect.Play();
+            //other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
+            goalitem = true;
+        }
+
+        if(other.gameObject.tag == "goalitem2"){
+            Goalflag = 2;
             goaliEffect.transform.position = other.transform.position;
             goaliEffect.Play();
             //other.gameObject.SetActive(false);

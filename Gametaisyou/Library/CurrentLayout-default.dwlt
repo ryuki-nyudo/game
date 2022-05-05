@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 7.2000003
-    y: 50.4
-    width: 1521.6
-    height: 766.4
+    x: -1920
+    y: -82
+    width: 1920
+    height: 1117
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 392}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,21 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
-    width: 1536
-    height: 731
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+    width: 1920
+    height: 1067
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 108
-=======
-    width: 1522
-    height: 717
-  m_MinSize: {x: 677, y: 342}
-  m_MaxSize: {x: 12002, y: 8042}
-  vertical: 0
-  controlID: 65
->>>>>>> moriki/Player20
+  controlID: 107
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -73,19 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1054
+    x: 1530
     y: 0
-    width: 482
-    height: 731
-=======
-    x: 1181
-    y: 0
-    width: 341
-    height: 717
->>>>>>> moriki/Player20
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 390
+    height: 1067
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -108,15 +92,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 395
-    height: 455
-=======
-    width: 443
-    height: 446
->>>>>>> moriki/Player20
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 379
+    height: 645
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -132,32 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 455
-    width: 1054
-    height: 276
+    y: 645
+    width: 1530
+    height: 422
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
-=======
-    y: 446
-    width: 1181
-    height: 271
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
->>>>>>> moriki/Player20
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,9 +148,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1522
-    height: 767
-  m_MinSize: {x: 875, y: 392}
+    width: 1920
+    height: 1117
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -199,7 +169,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1522
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -220,8 +190,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 747
-    width: 1522
+    y: 1097
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -244,21 +214,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1054
-    height: 731
-  m_MinSize: {x: 402, y: 492}
+    width: 1530
+    height: 1067
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 38
-=======
-    width: 1181
-    height: 717
-  m_MinSize: {x: 402, y: 342}
-  m_MaxSize: {x: 8002, y: 8042}
-  vertical: 1
-  controlID: 112
->>>>>>> moriki/Player20
+  controlID: 108
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,21 +239,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1054
-    height: 455
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+    width: 1530
+    height: 645
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 39
-=======
-    width: 1181
-    height: 446
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
-  vertical: 0
-  controlID: 113
->>>>>>> moriki/Player20
+  controlID: 109
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -308,26 +260,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 395
+    x: 379
     y: 0
-    width: 659
-    height: 455
-=======
-    x: 443
-    y: 0
-    width: 738
-    height: 446
->>>>>>> moriki/Player20
+    width: 1151
+    height: 645
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
-  - {fileID: 12}
   - {fileID: 17}
+  - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,15 +289,15 @@ MonoBehaviour:
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
     m_Text: Asset Store
-    m_Image: {fileID: -4391848389275900105, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 447.2
-    y: 80.8
-    width: 743
-    height: 434
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -370,22 +315,15 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-    y: 528
-    width: 1053
-    height: 255
-=======
-    x: 7.2000003
-    y: 526.4
-    width: 1180
-    height: 250
->>>>>>> moriki/Player20
+    x: -1920
+    y: 593
+    width: 1529
+    height: 401
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -400,26 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Script
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Script
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\kbc12006038\Documents\game\Gametaisyou
+  m_LastProjectPath: "D:\\school\\\u30C1\u30FC\u30E0\u5236\u4F5C\\GameTaisyo\\Gametaisyou"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_SelectedIDs: fc360000
-    m_LastClickedID: 14076
-    m_ExpandedIDs: 00000000ea360000ec360000
-=======
-    m_SelectedIDs: 2e3c0000
-    m_LastClickedID: 15406
-    m_ExpandedIDs: 00000000143c0000163c000000ca9a3b
->>>>>>> moriki/Player20
+    m_SelectedIDs: 2c3c0000
+    m_LastClickedID: 15404
+    m_ExpandedIDs: 00000000123c0000143c00001c3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -447,11 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000ea360000ec360000
-=======
-    m_ExpandedIDs: 00000000143c0000163c0000
->>>>>>> moriki/Player20
+    m_ExpandedIDs: 00000000123c0000143c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -476,10 +404,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e6350000
-    m_LastClickedInstanceID: 13798
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000000000000c03e0000
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -523,22 +451,15 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: 8356117983803934776, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1054.4
-    y: 73.6
-    width: 481
-    height: 710
-=======
-    x: 1188
-    y: 80.8
-    width: 339
-    height: 696
->>>>>>> moriki/Player20
+    x: -390
+    y: -52
+    width: 389
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -568,50 +489,36 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-    y: 73.6
-    width: 394
-    height: 434
+    x: -1920
+    y: -52
+    width: 378
+    height: 624
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f8a5ffff06a6ffff40abffffe4abffffd2adffffe0adffff9cafffffd6b4ffff66b8ffff9cb8ffffd6bdffffe4bdffff1ec3ffff0cc5ffffb0c5ffffbec5ffffc6c5fffffec5ffff38cbffff90d0ffffdcd5ffffa6dbfffff8dbffff66e1ffffb0e1ffffeae6ffff8cecffff9aecffff5aedffff6aedffffa4f2ffffb2f2ffffecf7fffffaf7ffff7af8ffff58fbffffe640000060470000a44700008c550000e8570000
-=======
-    x: 7.2000003
-    y: 80.8
-    width: 442
-    height: 425
-  m_ViewDataDictionary: {fileID: 0}
-  m_SceneHierarchy:
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 12}
-      m_SelectedIDs: e6350000
-      m_LastClickedID: 13798
-      m_ExpandedIDs: 6efbffffb23400000a35000026360000
->>>>>>> moriki/Player20
+      m_ExpandedIDs: 7efdfeff9019ffffbc1bffff9c37ffffbc3affffaa56ffff167dffffa292fffff89effffaaa7ffff7cafffff6efbffffb4340000c2340000063500008c350000103600002636000006bc000026bc000096bc00009abe0000d6c3000026c4000022e7000072e700007ee900009ee900000eea0000f20d0100420e01004e100100de1001002c1b01003a1b01007c1b0100881d0100801e0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: key
+        m_OriginalName: key
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 50494
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -620,7 +527,7 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-  m_WindowGUID: ad44fe008102910479cf30b3ffa8affd
+  m_WindowGUID: b29f522529209184ebf9ab6c0acdccb2
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -637,25 +544,18 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 395.2
-    y: 73.6
-    width: 657
-    height: 434
-=======
-    x: 450.4
-    y: 80.8
-    width: 736
-    height: 425
->>>>>>> moriki/Player20
+    x: -1541
+    y: -52
+    width: 1149
+    height: 624
   m_ViewDataDictionary: {fileID: 0}
-  m_ShowContextualTools: 1
-  m_WindowGUID: 1f69c5ac996fe1741adbc6327252f6f5
+  m_ShowContextualTools: 0
+  m_WindowGUID: 5ba99ce08f444e646958f745d75a4a9e
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -664,15 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 1001.8825, y: 488.40665, z: -1521.45}
+    m_Target: {x: 38.64102, y: -1.8124306, z: -0.9375}
     speed: 2
-    m_Value: {x: 1001.8825, y: 488.40665, z: -1521.45}
-=======
-    m_Target: {x: 70.31799, y: -4.582281, z: -1}
-    speed: 2
-    m_Value: {x: 70.31799, y: -4.582281, z: -1}
->>>>>>> moriki/Player20
+    m_Value: {x: 38.64102, y: -1.8124306, z: -0.9375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -722,15 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 1318.0657
+    m_Target: 40.23876
     speed: 2
-    m_Value: 1261.3069
-=======
-    m_Target: 29.448927
-    speed: 2
-    m_Value: 29.448927
->>>>>>> moriki/Player20
+    m_Value: 40.23876
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -771,15 +659,15 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 450.4
-    y: 80.8
-    width: 736
-    height: 425
+    x: -1541
+    y: -52
+    width: 1149
+    height: 624
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -801,10 +689,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -768
-    m_HBaseRangeMax: 768
-    m_VBaseRangeMin: -432
-    m_VBaseRangeMax: 432
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -822,23 +710,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 736
-      height: 404
-    m_Scale: {x: 0.4675926, y: 0.4675926}
-    m_Translation: {x: 368, y: 202}
+      width: 1149
+      height: 603
+    m_Scale: {x: 0.55833334, y: 0.55833334}
+    m_Translation: {x: 574.5, y: 301.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -787.0099
-      y: -432
-      width: 1574.0198
-      height: 864
+      x: -1028.9552
+      y: -540
+      width: 2057.9104
+      height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.4675926
-  m_LastWindowPixelSize: {x: 920, y: 531.25}
+  m_defaultScale: 0.55833334
+  m_LastWindowPixelSize: {x: 1149, y: 624}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -860,13 +748,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -3303252850963283158, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 7.2000003
-    y: 526.4
-    width: 1180
-    height: 250
+    x: -1920
+    y: 593
+    width: 1529
+    height: 401
   m_ViewDataDictionary: {fileID: 0}

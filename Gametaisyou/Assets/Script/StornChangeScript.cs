@@ -39,16 +39,6 @@ public class StornChangeScript : MonoBehaviour{
     public void Update(){
         StornTime += Time.deltaTime;
 
-        //画像切り替え
-        if(Stornbreak == true){
-            if(StornChange == 0){
-                Storn1Change();
-            }
-            else if(StornChange == 1){
-                Storn2Change();
-            }
-        }
-
         //画像非表示
         if(StornTime >= StornChangeTimer){
             if(StornChange == 1){
@@ -67,10 +57,17 @@ public class StornChangeScript : MonoBehaviour{
 
                 if(Stornbreak == true){
                     //音の管理
-                    if(StornChange == 0 || StornChange == 1){
+                    if(StornChange == 0 /*|| StornChange == 1*/){
                         StornTime = 0f;
                         audioSource.PlayOneShot(break1);
                         Debug.Log("audio01");
+                        Storn1Change();
+                    }
+                    else if(StornChange == 1){
+                        StornTime = 0f;
+                        audioSource.PlayOneShot(break1);
+                        Debug.Log("audio03");
+                        Storn2Change();
                     }
                     else if(StornChange == 2){
                         audioSource.PlayOneShot(break2);
@@ -83,14 +80,14 @@ public class StornChangeScript : MonoBehaviour{
     }
 
     void Storn1Change(){
-        Storn1.SetActive(true);
         StornChange = 1;
+        Storn1.SetActive(true);
         Debug.Log("01");
     }
 
     void Storn2Change(){
-        Storn2.SetActive(true);
         StornChange = 2;
+        Storn2.SetActive(true);
         Debug.Log("02");
     }
 }

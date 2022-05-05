@@ -39,6 +39,11 @@ public class Goalitem : MonoBehaviour
     }
     void SceneChange()
     {
-        SceneManager.LoadScene("Game2");
+        if(Player.GetComponent<Player>().Goalflag == 1){
+            SceneManager.LoadScene("Game2");
+        }
+        else if(Player.GetComponent<Player>().Goalflag == 2){
+            SceneManager.LoadScene("Game3");
+        }
     }
 }
