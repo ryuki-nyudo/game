@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public float ntime;
     public float nTimer = 0.5f;
 
-    public GameObject AttackEffect;
+    [SerializeField] public ParticleSystem AttackEffect;
 
     public bool goalitem;
     // public GameObject MPitem;
@@ -63,12 +63,18 @@ public class Player : MonoBehaviour
 
         goalitem = false;
 
+        AttackEffect.Stop();
 
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
     }
     void Update(){
         ntime += Time.deltaTime;
+
+        //アタックエフェクト座標取得
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("joystick button 1")){
+            Particle();
+        }
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -91,8 +97,6 @@ public class Player : MonoBehaviour
             {
                 rb.velocity = new Vector2(-speed, rb.velocity.y);
                 Accel();
-
-
             }
 
             //上入力で上向きに動く
@@ -134,12 +138,11 @@ public class Player : MonoBehaviour
                 slow = true;
             }
         }
-
     }
 
     public void Accel()
     {
-        if (Input.GetKeyDown(KeyCode.Space) /*&& mpitem.iflag = false*/)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (tap == true)
             {
@@ -147,7 +150,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        //Effect();
+                        AttackEffect.Play();
                         int move = 10;
 
                         currentSt = currentSt - move;
@@ -157,7 +160,6 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        //Destroy(AttackEffect);
                     }
                 }
             }
@@ -170,7 +172,7 @@ public class Player : MonoBehaviour
                 {
                     if (currentSt >= 10)
                     {
-                        //Effect();
+                        AttackEffect.Play();
                         audioSource.PlayOneShot(Sound1);
                         int move = 10;
 
@@ -181,7 +183,6 @@ public class Player : MonoBehaviour
                         speed += attackspeed;
                         attackflag = true;
                         Invoke("Decelerate", 0.3f);
-                        //Destroy(AttackEffect);
                     }
                 }
             }
@@ -189,23 +190,13 @@ public class Player : MonoBehaviour
         
     }
 
-    //void Update()
-    //{
-
-    //    int kkarisu = script.karisu;
-
-    //    if (kkarisu == 1)
-    //    {
-    //        rb.AddForce(force, ForceMode2D.Impulse);
-    //    }
-
-    //}
     void Decelerate()
     {
         //if(mpitem.iflag == fasle){
             speed -= attackspeed;
             attackflag = false;
             tap = true;
+            AttackEffect.Stop();
         // }
         // else if(mpitem.iflag == true){
         //     speed -= 18;
@@ -253,14 +244,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Effect(){
-        Debug.Log("deta");
-        GameObject effect = Instantiate(AttackEffect) as GameObject;
-        effect.transform.position = gameObject.transform.position;
+    void mahi(){
+        nock = false;
     }
 
-    void mahi()
-    {
-        nock = false;
+    void Particle(){
+        AttackEffect.transform.position = transform.position;
     }
 }

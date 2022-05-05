@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StornDestroy : MonoBehaviour
-{
+public class StornDestroy : MonoBehaviour{
     // 自身の子要素を管理するリスト
     List<GameObject> myParts = new List<GameObject>();
 
     GameObject Attackflag;
-    GameObject Stornflag;
+    public GameObject Stornflag;
     public GameObject box;
 
     // Start is called before the first frame update
-    public void Start()
-    {
-        Attackflag = GameObject.Find("player");
-        Stornflag = GameObject.Find("StornScript");
-        // 自分の子要素をチェック
+    public void Start(){
+        //Storn_blockの子要素をチェック
         foreach (Transform child in gameObject.transform){
             // ビルパーツに Rigidbody2D を追加して Kinematic にしておく
             child.gameObject.AddComponent<Rigidbody2D>();
@@ -28,9 +24,8 @@ public class StornDestroy : MonoBehaviour
     }
 
     public void Explode(){
-        Debug.Log("huttonnda");
         // 各パーツをふっとばす
-        foreach (GameObject obj in myParts){  
+        foreach (GameObject obj in myParts){
             // 飛ばすパワーと回転をランダムに設定
             Vector2 forcePower = new Vector2(Random.Range(-10, 10), Random.Range(-10, 10));
             float torquePower = Random.Range(-10, 10);
@@ -46,15 +41,7 @@ public class StornDestroy : MonoBehaviour
         if(Stornflag.GetComponent<StornChangeScript>().Stornbreak == true){
             Debug.Log("kesu");
             Explode();
-        }
-    }
-
-    //テスト用
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && Attackflag.GetComponent<Player>().attackflag == true)
-        {
-            Explode();
+            Stornflag.GetComponent<StornChangeScript>().Stornbreak = false;
         }
     }
 }

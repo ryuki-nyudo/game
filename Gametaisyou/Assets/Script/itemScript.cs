@@ -32,22 +32,11 @@ public class itemScript : MonoBehaviour
         woodbox = GameObject.FindWithTag("itembox");
         script = woodbox.GetComponent<BoxDestroy>();
 
-            }
+    }
 
-    //    void Update(){
-    //        //item処理
-    //        if (Box.activeSelf == false && ixflag == true)
-    //        {
-    //            iTime = 0f;
-    //            ixflag = false;
-    //            attack.HPflag = false;
-    //            item.gameObject.SetActive(true);
-    //        }
-    //    }
-    //}
     void OnCollisionEnter2D(Collision2D collision) {
         //item処理
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Player" && Attack.GetComponent<Player>().attackflag == true) {
             if (script.KAIsyutugen == true && ixflag == true)
             {
 

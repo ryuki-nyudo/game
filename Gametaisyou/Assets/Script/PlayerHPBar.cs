@@ -19,6 +19,7 @@ public class PlayerHPBar : MonoBehaviour
     Player player;
     GameObject Attack;
     Attack attack;
+    GameObject AirCursor;
     // GameObject Item;
     // Item item;
 
@@ -32,7 +33,7 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip HPcaveat;
     public AudioClip HealSE;
     public AudioClip DestroySE;
-    public AudioClip Muteki;
+    //public AudioClip Muteki;
     bool hflag;
     public float audio;
     public float htimer = 3.0f;
@@ -71,6 +72,8 @@ public class PlayerHPBar : MonoBehaviour
         gameover.SetActive(false);
 
         MPflag = false;
+
+        AirCursor = GameObject.Find("AirFade");
     }
 
     void Update(){
@@ -133,6 +136,11 @@ public class PlayerHPBar : MonoBehaviour
                 currentHp = 100;
             }
         }
+
+        // if(other.gameObject.tag == "Airitem"){
+        //     AirCursor.GetComponent<Air>().currentAir += 0.2;
+        //     AirCursor.GetComponent<Air>().slider.value = AirCursor.GetComponent<Air>().currentAir / AirCursor.GetComponent<Air>().maxAir;
+        // }
 
         if(other.gameObject.tag == "MPitem" /*&& timer <= pTime*/){
             MPflag = true;
