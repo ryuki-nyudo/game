@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Air : MonoBehaviour
 {
     //最大HPと現在のHP。
-    int maxAir = 100;
-    double currentAir;
+    public int maxAir = 100;
+    public double currentAir;
 
     public Slider slider;
 
@@ -24,10 +24,9 @@ public class Air : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (currentAir <= maxAir)
-        {
+        if (currentAir <= maxAir){
             currentAir -= 0.025;
-            slider.value = (float)currentAir / (float)maxAir; ;
+            slider.value = (float)currentAir / (float)maxAir;
         }
 
         if(currentAir <= 35){
