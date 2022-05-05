@@ -9,10 +9,6 @@ public class StornChangeScript : MonoBehaviour{
     public GameObject Storn0;
     public GameObject Storn1;
     public GameObject Storn2;
-
-    public GameObject Storn0Destroy;
-    public GameObject Storn1Destroy;
-    public GameObject Storn2Destroy;
     
     AudioSource audioSource; 
     public AudioClip break1;
