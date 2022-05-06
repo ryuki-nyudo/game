@@ -8,7 +8,6 @@ public class BoxDestroy : MonoBehaviour
     List<GameObject> myParts = new List<GameObject>();
 
     GameObject Attackflag;
-    public GameObject box;
     public BoxCollider2D col;
 
     public bool KAIsyutugen = false; //コライダーが消えたら貝を出現させるための判定
@@ -23,7 +22,6 @@ public class BoxDestroy : MonoBehaviour
     public float timer = 0.5f;
     public float jTime;
     public bool iflag = false;
-    public GameObject Box;
     public GameObject item;
     public bool ixflag;
 
@@ -83,16 +81,13 @@ public class BoxDestroy : MonoBehaviour
         {
 
             Explode();
-            if (KAIsyutugen == true && ixflag == true)
-            {
-                Debug.Log("!!!!!!");
+            if (KAIsyutugen == true && ixflag == true){
                 item.gameObject.SetActive(true);
                 iTime = 0f;
                 ixflag = false;
                 attack.HPflag = false;
 
             }
-
         }
     }
 }
