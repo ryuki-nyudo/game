@@ -136,7 +136,6 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if (other.gameObject.tag == "enemy" && player.attackflag == true)
         {
-            Destroy(other.gameObject);
             audioSource.PlayOneShot(DestroySE);
         }
         else if (other.gameObject.tag == "enemy2" && player.attackflag == true)
