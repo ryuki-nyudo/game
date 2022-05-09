@@ -189,8 +189,6 @@ public class PlayerHPBar : MonoBehaviour
 
         if (other.gameObject.tag == "goal" && player.goalitem == true)
         {
-
-
             start++;
         }
 
