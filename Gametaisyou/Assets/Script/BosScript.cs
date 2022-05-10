@@ -13,10 +13,21 @@ public class BosScript : MonoBehaviour
     public float yspeed = 1;
     public float xspeed = 1;
 
+    public float hxspeed = 1;
+    public float hyspeed = 1;
+
+    public bool bosflag = true;
+
+    GameObject Player;
+    Player player;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pos = transform.position;
+
+        Player = GameObject.Find("player");
+        player = Player.GetComponent<Player>();
     }
 
     // 物理演算をしたい場合はFixedUpdateを使うのが一般的
@@ -57,10 +68,25 @@ public class BosScript : MonoBehaviour
        
 
     }
- void FixedUpdate() 
+
+
+    void FixedUpdate()
     {
-        if (this.transform.position.y <= -1) {
+        if (this.transform.position.y <= 1)
+        {
             transform.position += new Vector3(xspeed, yspeed, 0);
+        }
+
+        if (bosflag == false && this.transform.position.y > -20)
+        {
+            transform.position += new Vector3(hxspeed, -hyspeed, 0);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Player" && player.attackflag == true)
+        {
+            bosflag = false;
         }
     }
 }

@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
 
                         currentSt = currentSt - move;
 
-                        slider.value = (float)currentSt / (float)maxSt; ;
+                        slider.value = (float)currentSt / (float)maxSt; 
                         tap = false;
                         speed += attackspeed;
                         attackflag = true;
