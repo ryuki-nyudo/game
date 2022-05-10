@@ -14,7 +14,7 @@ public class EnemyDownTime : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         EnemyCount += Time.deltaTime;
-        if(EnemyCount >= EnemyDownTimer && EnemyMove.GetComponent<EnemyDown>().Enemyflag == true){
+        if(EnemyCount >= EnemyDownTimer){
             gameObject.SetActive(false);
         }
     }
