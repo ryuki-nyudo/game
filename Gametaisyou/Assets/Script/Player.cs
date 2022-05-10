@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
 
     public void Accel()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("joystick button 1"))
         {
             if (tap == true)
             {
@@ -168,34 +168,9 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetKeyDown("joystick button 1") /*&& mpitem.iflag = true*/)
-        {
-            if (tap == true)
-            {
-                if (slow == false)
-                {
-                    if (currentSt >= 10)
-                    {
-                        AttackEffect.Play();
-                        audioSource.PlayOneShot(Sound1);
-                        int move = 10;
-
-                        currentSt = currentSt - move;
-
-                        slider.value = (float)currentSt / (float)maxSt; ;
-                        tap = false;
-                        speed += attackspeed;
-                        attackflag = true;
-                        Invoke("Decelerate", 0.3f);
-                    }
-                }
-            }
-        }
-        
     }
 
-    void Decelerate()
-    {
+    void Decelerate(){
         //if(mpitem.iflag == fasle){
             speed -= attackspeed;
             attackflag = false;
