@@ -15,8 +15,6 @@ TagManager:
   - enemy2
   - goalitem2
   - Airitem
-  - MAXHPitem
-  - AirMAX
   layers:
   - Default
   - TransparentFX
