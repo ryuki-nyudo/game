@@ -10,6 +10,7 @@ public class PlayerHPBar : MonoBehaviour
     public static float initialHp;
     public static float currentHp;
     int recovery = 20;
+    int MAXrecovery = 60;
     int damage = 10;
     public static float start;
 
@@ -21,6 +22,7 @@ public class PlayerHPBar : MonoBehaviour
     Attack attack;
 
     GameObject Attackflag;
+    public GameObject AirCursor;
     // GameObject Item;
     // Item item;
 
@@ -124,7 +126,7 @@ public class PlayerHPBar : MonoBehaviour
             //最大HPにおける現在のHPをSliderに反映。
             //int同士の割り算は小数点以下は0になるので、
             //(float)をつけてfloatの変数として振舞わせる。
-            //slider.value = (float)currentHp / (float)maxHp;
+            slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
         else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
@@ -156,12 +158,6 @@ public class PlayerHPBar : MonoBehaviour
             //Debug.Log("aaaaaaa");
             audioSource.PlayOneShot(BoxDestroySE);
         }
-
-        if (other.gameObject.tag == "goalitem")
-        {
-
-
-        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -187,10 +183,31 @@ public class PlayerHPBar : MonoBehaviour
             
         }
 
+        if(other.gameObject.tag == "MAXHPitem" && timer <= pTime){
+            other.gameObject.SetActive(false);
+            currentHp = currentHp + MAXrecovery;
+            audioSource.PlayOneShot(HealSE);
+            slider.value = (float)currentHp / (float)maxHp;
+            if (currentHp > 100){
+                currentHp = 100;
+            }
+        }
+
+        if(other.gameObject.tag == "AirMAX"){
+            Debug.Log("aaa");
+            other.gameObject.SetActive(false);
+            //Air回復処理
+            AirCursor.GetComponent<Air>().currentAir += 100;
+            //Air残量が１００以上だったら
+            if(AirCursor.GetComponent<Air>().currentAir >= 100){
+                AirCursor.GetComponent<Air>().currentAir = 100;
+            }
+            //Sliderに反映
+            AirCursor.GetComponent<Air>().slider.value = (float)AirCursor.GetComponent<Air>().currentAir / (float)AirCursor.GetComponent<Air>().maxAir;
+        }
+
         if (other.gameObject.tag == "goal" && player.goalitem == true)
         {
-
-
             start++;
         }
 
