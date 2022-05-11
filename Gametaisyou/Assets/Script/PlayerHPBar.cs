@@ -124,7 +124,7 @@ public class PlayerHPBar : MonoBehaviour
             //最大HPにおける現在のHPをSliderに反映。
             //int同士の割り算は小数点以下は0になるので、
             //(float)をつけてfloatの変数として振舞わせる。
-            //slider.value = (float)currentHp / (float)maxHp;
+            slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
         else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
