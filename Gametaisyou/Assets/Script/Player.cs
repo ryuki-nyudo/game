@@ -43,12 +43,14 @@ public class Player : MonoBehaviour
     [SerializeField] public ParticleSystem AttackEffect;
 
     public bool goalitem;
+    GameObject Kurage;
     // public GameObject MPitem;
     // MPitem key;
 
     void Start(){
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
+        Kurage = GameObject.Find("player");
         Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
@@ -202,13 +204,12 @@ public class Player : MonoBehaviour
         {
             //キー入力無効＆ノックバック
             nock = true;
-            if (nock == true)
-            {
+            if (nock == true){
                 ntime = 0f;
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
-                Invoke("mahi", 1.5f);
+                Invoke("mahi", 2.0f);
             }
         }
     }
@@ -235,6 +236,7 @@ public class Player : MonoBehaviour
 
     void mahi(){
         nock = false;
+        Kurage.GetComponent<PlayerHPBar>().Kurageflag = false;
     }
 
     void Particle(){
