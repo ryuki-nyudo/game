@@ -76,37 +76,40 @@ public class BosScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        Transform p = Player.transform;
+        Transform b = this.transform;
+
+
+        Vector3 ppos = p.position;
+        Vector3 bpos = b.position;
+
+        var px = ppos.x;
+        var bx = bpos.x;
+        var x = bx - px;
+        var x2 = px - bx;
+
+
         //攻撃されたとき足を引っ込める
         if (bosflag == false && this.transform.position.y >= -20)
         {
             transform.position += new Vector3(hxspeed, -hyspeed, 0);
-            boskougekiflag = true;
-
+            if (this.transform.position.y <= -20) {
+                boskougekiflag = true;
+            }
         }
 
-        Transform a = Player.transform;
-        Transform b = this.transform;
-
-
-        Vector3 apos = a.position;
-        Vector3 bpos = b.position;
-
-        var ax = apos.x;
-        var bx = bpos.x;
-        var x = bx - ax;
-        var x2 = ax - bx;
 
         //画面外からアッパー攻撃
-        if (x > -1 && x < 10 && boskougekiflag == true && this.transform.position.y <= 1)
+        if (x < 20 && boskougekiflag == true && this.transform.position.y <= 0.19)
         {
             bosflag = true;
             transform.position += new Vector3(-kxspeed, kyspeed, 0);
+            if (this.transform.position.y >= 0.19)
+            {
+                boskougekiflag = false;
+            }
         }
-        //else if (x2 < 10 && boskougekiflag == true && this.transform.position.y <= 1)
-        //{
-        //    bosflag = true;
-        //    transform.position += new Vector3(-kxspeed, kyspeed, 0);
-        //}
+       
 
 
     }
