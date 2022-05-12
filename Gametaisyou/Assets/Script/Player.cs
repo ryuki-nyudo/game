@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
     // public GameObject MPitem;
     // MPitem key;
 
+    GameObject Kurage;
+
     void Start(){
         // MPitem = GameObject.Find("key");
         // key = MPItem.GetComponent<itemScript>();
@@ -68,6 +70,8 @@ public class Player : MonoBehaviour
         AttackEffect.Stop();
 
         Goalflag = 0;
+
+        Kurage = GameObject.Find("player");
 
         //Enemy = GameObject.Find("Enemy");
         //script = Enemy.GetComponent<EnemyBehaviourScript>();
@@ -208,7 +212,7 @@ public class Player : MonoBehaviour
                 Vector3 distination = (transform.position - collision.gameObject.transform.position).normalized;
                 rb.AddForce(distination * enemypower, ForceMode2D.Impulse);
                 //Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
-                Invoke("mahi", 1.5f);
+                Invoke("mahi", 2.0f);
             }
         }
     }
@@ -235,6 +239,7 @@ public class Player : MonoBehaviour
 
     void mahi(){
         nock = false;
+        Kurage.GetComponent<PlayerHPBar>().Kurageflag = false;
     }
 
     void Particle(){
