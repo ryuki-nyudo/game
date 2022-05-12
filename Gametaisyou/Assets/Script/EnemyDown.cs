@@ -3,39 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyDown : MonoBehaviour{
-    public GameObject EnemyMove;
-    public GameObject EnemyDownImage;
+    SpriteRenderer MainSpriteRenderer;
+    public Sprite EnemyMove;
+    public Sprite EnemyDownImage;
 
-    bool Downflag;
-    float DownTimer = 1.5f;
     float ECountTime;
+    float EnemyTimer = 2.0f;
+    public bool Enemyflag;
 
     GameObject Player;
+    public PolygonCollider2D col;
 
     void Start(){
-        EnemyMove.SetActive(true);
-        EnemyDownImage.SetActive(false);
+        // このobjectのSpriteRendererを取得
+        MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-        Player = GameObject.Find("Player");
-        Downflag = false;
-        ECountTime = 0.0f;
+        Player = GameObject.Find("player");
+
+        Enemyflag = false;
     }
 
     void Update(){
         ECountTime += Time.deltaTime;
-        //enemyの位置を随時取得
-        EnemyDownImage.transform.position = EnemyMove.transform.position;
-
-        if(ECountTime >= DownTimer){
-            Destroy(EnemyDownImage);
+        if(Enemyflag == true && ECountTime >= EnemyTimer){
+            Destroy(gameObject);
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other){
+    public void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.tag == "Player" && Player.GetComponent<Player>().attackflag == true){
-            Destroy(EnemyMove);
-            EnemyDownImage.SetActive(true);
-            Downflag = true;
+            MainSpriteRenderer.sprite = EnemyDownImage;
+
+            ECountTime = 0.0f;
+            Enemyflag = true;
+            col.enabled = false;
         }
     }
 }
