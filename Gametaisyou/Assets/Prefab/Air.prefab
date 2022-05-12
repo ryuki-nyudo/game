@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 4.29, y: 2.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8219558558980459575
@@ -4851,3 +4851,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AirEffect: {fileID: 8219558558980459568}
   AirCursor: {fileID: 0}
+  Sound1: {fileID: 8300000, guid: 316210ed4b15d4346a3c2ec4f8a93e08, type: 3}

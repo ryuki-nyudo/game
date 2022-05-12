@@ -7,13 +7,17 @@ public class AirRecovery : MonoBehaviour
     [SerializeField] public ParticleSystem AirEffect;
     public GameObject AirCursor;
     // Start is called before the first frame update
+    
+    AudioSource audioSource; 
+    public AudioClip Sound1;
+
     void Start(){
         AirEffect.Play();
     }
     
     void OnParticleCollision(GameObject other){
         if(other.gameObject.tag == "Player"){
-            Debug.Log("Air");
+            audioSource.PlayOneShot(Sound1);
             Destroy(AirEffect);
 
             //Air回復処理
