@@ -39,7 +39,6 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip Muteki;
     public AudioClip BoxDestroySE;
     public AudioClip GoalItemSE;
-    public AudioClip KurageSE;
 
     bool hflag;
     public float audio;
@@ -50,8 +49,6 @@ public class PlayerHPBar : MonoBehaviour
     bool MPflag;
 
     public GameObject gameover;
-    public GameObject KurageEffect;
-    public bool Kurageflag;
 
     void Start()
     {
@@ -84,8 +81,6 @@ public class PlayerHPBar : MonoBehaviour
         gameover.SetActive(false);
 
         MPflag = false;
-        Kurageflag = false;
-        KurageEffect.SetActive(false);
     }
 
     void Update()
@@ -112,16 +107,10 @@ public class PlayerHPBar : MonoBehaviour
             }
         }
 
-        if (currentHp <= 0){
+        if (currentHp <= 0)
+        {
             gameover.SetActive(true);
             Time.timeScale = 0f;
-        }
-
-        if(Kurageflag == true){
-            KurageEffect.transform.position = gameObject.transform.position;
-            KurageEffect.SetActive(true);
-        } else if(Kurageflag == false){
-            KurageEffect.SetActive(false);
         }
     }
 
@@ -142,9 +131,8 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
         {
-            Kurageflag = true;
             currentHp = currentHp - damage;
-            audioSource.PlayOneShot(KurageSE, 1.5f);
+            audioSource.PlayOneShot(damageSE);
             slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
@@ -207,9 +195,8 @@ public class PlayerHPBar : MonoBehaviour
 
         if(other.gameObject.tag == "AirMAX"){
             Debug.Log("aaa");
-            other.gameObject.SetActive(false);
             //Air回復処理
-            AirCursor.GetComponent<Air>().currentAir += 100;
+            AirCursor.GetComponent<Air>().currentAir += 70;
             //Air残量が１００以上だったら
             if(AirCursor.GetComponent<Air>().currentAir >= 100){
                 AirCursor.GetComponent<Air>().currentAir = 100;
