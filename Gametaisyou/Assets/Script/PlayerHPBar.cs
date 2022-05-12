@@ -39,16 +39,21 @@ public class PlayerHPBar : MonoBehaviour
     public AudioClip Muteki;
     public AudioClip BoxDestroySE;
     public AudioClip GoalItemSE;
+    public AudioClip KurageSE;
 
     bool hflag;
     public float audio;
     public float htimer = 3.0f;
 
-    public float MPtimer = 1.0f;
+    public float MPtimer = 5.0f;
     public float MPtime;
     bool MPflag;
 
     public GameObject gameover;
+    public GameObject KurageEffect;
+    public bool Kurageflag;
+    public bool gameoverflag;
+    public GameObject MPitemGet;
 
     void Start()
     {
@@ -81,6 +86,10 @@ public class PlayerHPBar : MonoBehaviour
         gameover.SetActive(false);
 
         MPflag = false;
+        KurageEffect.SetActive(false);
+        Kurageflag = false;
+        gameoverflag = false;
+        MPitemGet.SetActive(false);
     }
 
     void Update()
@@ -92,6 +101,7 @@ public class PlayerHPBar : MonoBehaviour
         if (MPflag == true && MPtime >= MPtimer)
         {
             MPflag = false;
+            MPitemGet.SetActive(false);
             //audioSource.PlayOneShot(Muteki);
             player.attackspeed -= 36;
         }
@@ -111,6 +121,15 @@ public class PlayerHPBar : MonoBehaviour
         {
             gameover.SetActive(true);
             Time.timeScale = 0f;
+            gameoverflag = true;
+        }
+
+        if(Kurageflag == true){
+            KurageEffect.transform.position = gameObject.transform.position;
+            KurageEffect.SetActive(true);
+        }
+        else if(Kurageflag == false){
+            KurageEffect.SetActive(false);
         }
     }
 
@@ -131,8 +150,9 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if (other.gameObject.tag == "enemy2" && player.attackflag == false)
         {
+            Kurageflag = true;
             currentHp = currentHp - damage;
-            audioSource.PlayOneShot(damageSE);
+            audioSource.PlayOneShot(KurageSE);
             slider.value = (float)currentHp / (float)maxHp;
             Camera.main.gameObject.GetComponent<ShakeCamera>().Shake();
         }
@@ -177,6 +197,7 @@ public class PlayerHPBar : MonoBehaviour
         if (other.gameObject.tag == "MPitem" && timer <= pTime)
         {
             other.gameObject.SetActive(false);
+            MPitemGet.SetActive(true);
             MPflag = true;
             MPtime = 0f;
             player.attackspeed += 36;
@@ -195,9 +216,8 @@ public class PlayerHPBar : MonoBehaviour
 
         if(other.gameObject.tag == "AirMAX"){
             Debug.Log("aaa");
-            other.gameObject.SetActive(false);
             //Air回復処理
-            AirCursor.GetComponent<Air>().currentAir += 100;
+            AirCursor.GetComponent<Air>().currentAir += 70;
             //Air残量が１００以上だったら
             if(AirCursor.GetComponent<Air>().currentAir >= 100){
                 AirCursor.GetComponent<Air>().currentAir = 100;
