@@ -16,7 +16,11 @@ public class BosScript : MonoBehaviour
     public float hxspeed = 1;
     public float hyspeed = 1;
 
+    public float kxspeed = 1;
+    public float kyspeed = 1;
+
     public bool bosflag = true;
+    public bool boskougekiflag = false ;
 
     GameObject Player;
     Player player;
@@ -72,15 +76,39 @@ public class BosScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (this.transform.position.y <= 1)
-        {
-            transform.position += new Vector3(xspeed, yspeed, 0);
-        }
-
-        if (bosflag == false && this.transform.position.y > -20)
+        //攻撃されたとき足を引っ込める
+        if (bosflag == false && this.transform.position.y >= -20)
         {
             transform.position += new Vector3(hxspeed, -hyspeed, 0);
+            boskougekiflag = true;
+
         }
+
+        Transform a = Player.transform;
+        Transform b = this.transform;
+
+
+        Vector3 apos = a.position;
+        Vector3 bpos = b.position;
+
+        var ax = apos.x;
+        var bx = bpos.x;
+        var x = bx - ax;
+        var x2 = ax - bx;
+
+        //画面外からアッパー攻撃
+        if (x > -1 && x < 10 && boskougekiflag == true && this.transform.position.y <= 1)
+        {
+            bosflag = true;
+            transform.position += new Vector3(-kxspeed, kyspeed, 0);
+        }
+        //else if (x2 < 10 && boskougekiflag == true && this.transform.position.y <= 1)
+        //{
+        //    bosflag = true;
+        //    transform.position += new Vector3(-kxspeed, kyspeed, 0);
+        //}
+
+
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
