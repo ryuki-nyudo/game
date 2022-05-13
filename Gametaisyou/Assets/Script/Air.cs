@@ -22,7 +22,7 @@ public class Air : MonoBehaviour
         Fade = GameObject.Find("AirFade");
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (currentAir <= maxAir){
             currentAir -= 0.025;
@@ -36,6 +36,10 @@ public class Air : MonoBehaviour
             if(Fade.GetComponent<AirFade>().alfa >= 0.5){
                 Fade.GetComponent<AirFade>().isFadeIn = true;
             }
+        }
+
+        if(currentAir <= 0){
+            currentAir = 0;
         }
     }
 }
