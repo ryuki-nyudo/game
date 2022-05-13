@@ -29,7 +29,6 @@ public class BosHPBar : MonoBehaviour
         slider.value = 1;
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
-        Debug.Log("Start currentHp : " + currentHp);
 
         Player = GameObject.Find("player");
         player = Player.GetComponent<Player>();
@@ -49,17 +48,14 @@ public class BosHPBar : MonoBehaviour
         {
             //ダメージは1～100の中でランダムに決める。
             
-            Debug.Log("damage : " + damage);
 
             //現在のHPからダメージを引く
             currentHp = currentHp - damage;
-            Debug.Log("After currentHp : " + currentHp);
 
             //最大HPにおける現在のHPをSliderに反映。
             //int同士の割り算は小数点以下は0になるので、
             //(float)をつけてfloatの変数として振舞わせる。
-            slider.value = (float)currentHp / (float)maxHp; ;
-            Debug.Log("slider.value : " + slider.value);
+            slider.value = (float)currentHp / (float)maxHp;
         }
     }
 

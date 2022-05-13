@@ -12,6 +12,7 @@ public class PlayerHPBar : MonoBehaviour
     int recovery = 20;
     int MAXrecovery = 60;
     int damage = 10;
+    float Airdamage = 0.02f;
     public static float start;
 
     public Slider slider;
@@ -54,6 +55,7 @@ public class PlayerHPBar : MonoBehaviour
     public bool Kurageflag;
     public bool gameoverflag;
     public GameObject MPitemGet;
+    public GameObject AirD;
 
     void Start()
     {
@@ -90,6 +92,8 @@ public class PlayerHPBar : MonoBehaviour
         Kurageflag = false;
         gameoverflag = false;
         MPitemGet.SetActive(false);
+
+        AirD = GameObject.Find("player");
     }
 
     void Update()
@@ -130,6 +134,12 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if(Kurageflag == false){
             KurageEffect.SetActive(false);
+        }
+
+        if(AirD.GetComponent<Air>().currentAir <= 0){
+            Debug.Log("Airdamage");
+            currentHp = currentHp - Airdamage;
+            slider.value = (float)currentHp / (float)maxHp;
         }
     }
 
