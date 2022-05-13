@@ -2773,6 +2773,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1975033744}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &582177818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8335969113072069075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &608194618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
@@ -4392,6 +4398,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edd7407173665594089b7d9375669339, type: 3}
+--- !u!1 &925028528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1080376017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &930129639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5179,7 +5191,7 @@ PrefabInstance:
     - target: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
         type: 3}
       propertyPath: m_Name
-      value: ika_ashu 1 (1)
+      value: ika_ashu2
       objectReference: {fileID: 0}
     - target: {fileID: 8338037252591535846, guid: be03365269c890a4aad8cbaf21a50e6a,
         type: 3}
@@ -6028,6 +6040,7 @@ GameObject:
   - component: {fileID: 1178500504}
   - component: {fileID: 1178500503}
   - component: {fileID: 1178500502}
+  - component: {fileID: 1178500516}
   m_Layer: 8
   m_Name: player
   m_TagString: Player
@@ -10975,7 +10988,7 @@ MonoBehaviour:
   HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
   DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
   Muteki: {fileID: 0}
-  BoxDestroySE: {fileID: 0}
+  BoxDestroySE: {fileID: 8300000, guid: b983c113c9fc6814d806af062fbe44f0, type: 3}
   GoalItemSE: {fileID: 0}
   audio: 0
   htimer: 3
@@ -11255,6 +11268,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178500516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178500501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11f5f2a83a84274682656cba8f4697b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 703461360}
+  damage: 20
+  ika_ashu1: {fileID: 582177818}
+  ika_ashu2: {fileID: 925028528}
+  ika_ashu3: {fileID: 1702301115}
+  BosSlider: {fileID: 703461358}
 --- !u!1001 &1182453169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12002,7 +12033,7 @@ PrefabInstance:
     - target: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
         type: 3}
       propertyPath: m_Name
-      value: ika_ashu 1 (2)
+      value: ika_ashu3
       objectReference: {fileID: 0}
     - target: {fileID: 8338037252591535846, guid: be03365269c890a4aad8cbaf21a50e6a,
         type: 3}
@@ -12165,7 +12196,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309645376
 MonoBehaviour:
@@ -13671,6 +13702,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edd7407173665594089b7d9375669339, type: 3}
+--- !u!1 &1702301115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1277403065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1720363001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6114310689150181838, guid: f0019350e1c91cf4a8c44e2a22470a6b,
@@ -15986,7 +16023,17 @@ PrefabInstance:
     - target: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
         type: 3}
       propertyPath: m_Name
-      value: ika_ashu 1
+      value: ika_ashu1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338037252591535842, guid: be03365269c890a4aad8cbaf21a50e6a,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338037252591535845, guid: be03365269c890a4aad8cbaf21a50e6a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8338037252591535846, guid: be03365269c890a4aad8cbaf21a50e6a,
         type: 3}

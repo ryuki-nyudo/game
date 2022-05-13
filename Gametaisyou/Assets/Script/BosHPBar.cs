@@ -12,6 +12,16 @@ public class BosHPBar : MonoBehaviour
     int currentHp;
     //Sliderを入れる
     public Slider slider;
+    public int damage = 20;
+
+    GameObject Player;
+    Player player;
+
+    public GameObject ika_ashu1;
+    public GameObject ika_ashu2;
+    public GameObject ika_ashu3;
+
+    public GameObject BosSlider;
 
     void Start()
     {
@@ -20,16 +30,25 @@ public class BosHPBar : MonoBehaviour
         //現在のHPを最大HPと同じに。
         currentHp = maxHp;
         Debug.Log("Start currentHp : " + currentHp);
+
+        Player = GameObject.Find("player");
+        player = Player.GetComponent<Player>();
+
+        ika_ashu1.SetActive(true);
+        ika_ashu2.SetActive(true);
+        ika_ashu3.SetActive(true);
+
+        BosSlider.SetActive(true);
     }
 
     //ColliderオブジェクトのIsTriggerにチェック入れること。
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionEnter2D(Collision2D collider)
     {
         //Enemyタグのオブジェクトに触れると発動
-        if (collider.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "enemy" && player.attackflag == true)
         {
             //ダメージは1～100の中でランダムに決める。
-            int damage = Random.Range(1, 100);
+            
             Debug.Log("damage : " + damage);
 
             //現在のHPからダメージを引く
@@ -41,6 +60,18 @@ public class BosHPBar : MonoBehaviour
             //(float)をつけてfloatの変数として振舞わせる。
             slider.value = (float)currentHp / (float)maxHp; ;
             Debug.Log("slider.value : " + slider.value);
+        }
+    }
+
+    private void Update()
+    {
+        if (currentHp <= 0)
+        {
+            ika_ashu1.SetActive(false);
+            ika_ashu2.SetActive(false);
+            ika_ashu3.SetActive(false);
+
+            BosSlider.SetActive(false);
         }
     }
 }

@@ -2289,7 +2289,7 @@ MonoBehaviour:
   HealSE: {fileID: 8300000, guid: 5cdfb8b68c4decf4f814f890ef692a41, type: 3}
   DestroySE: {fileID: 8300000, guid: cdfe114738d7eb54ca001cc1919d5743, type: 3}
   Muteki: {fileID: 0}
-  BoxDestroySE: {fileID: 0}
+  BoxDestroySE: {fileID: 8300000, guid: 43c825c7af01c8c4a89541d4754284f1, type: 3}
   GoalItemSE: {fileID: 0}
   audio: 0
   htimer: 3
@@ -7772,7 +7772,7 @@ SpriteRenderer:
   m_Size: {x: 6, y: 4.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1003663772
@@ -8554,7 +8554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144763707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.53, y: 2.98, z: 3.1911404}
+  m_LocalPosition: {x: 19.04, y: 2.98, z: 3.1911404}
   m_LocalScale: {x: 0.241, y: 0.244, z: 1}
   m_Children: []
   m_Father: {fileID: 1857941636}
@@ -9680,7 +9680,7 @@ SpriteRenderer:
   m_Size: {x: 3.72, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1499832022
