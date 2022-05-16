@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AirRecovery : MonoBehaviour
 {
     [SerializeField] public ParticleSystem AirEffect;
     public GameObject AirCursor;
+    public Slider AirSlider;
 
     AudioSource audioSource; 
     public AudioClip SoundAir;
@@ -17,8 +19,8 @@ public class AirRecovery : MonoBehaviour
     
     void OnParticleCollision(GameObject other){
         if(other.gameObject.tag == "Player"){
+            AirCursor.GetComponent<Air>().Airflag = false;
             audioSource.PlayOneShot(SoundAir);
-            Debug.Log("Air");
             Destroy(AirEffect);
 
             //Air回復処理
@@ -28,8 +30,7 @@ public class AirRecovery : MonoBehaviour
                 AirCursor.GetComponent<Air>().currentAir = 100;
             }
             //Sliderに反映
-            AirCursor.GetComponent<Air>().slider.value = (float)AirCursor.GetComponent<Air>().currentAir / (float)AirCursor.GetComponent<Air>().maxAir;
-            Debug.Log(AirCursor.GetComponent<Air>().currentAir);
+            AirSlider.GetComponent<Air>().slider.value = (float)AirCursor.GetComponent<Air>().currentAir / (float)AirCursor.GetComponent<Air>().maxAir;
         }
     }
 }
