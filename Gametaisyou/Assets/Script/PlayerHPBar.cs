@@ -12,7 +12,7 @@ public class PlayerHPBar : MonoBehaviour
     int recovery = 20;
     int MAXrecovery = 60;
     int damage = 10;
-    float Airdamage = 0.02f;
+    float Airdamage = 0.05f;
     public static float start;
 
     public Slider slider;
@@ -23,7 +23,8 @@ public class PlayerHPBar : MonoBehaviour
     Attack attack;
 
     GameObject Attackflag;
-    public GameObject AirCursor;
+    public GameObject AirgameObject;
+    public Slider AirCursor;
     // GameObject Item;
     // Item item;
 
@@ -55,7 +56,6 @@ public class PlayerHPBar : MonoBehaviour
     public bool Kurageflag;
     public bool gameoverflag;
     public GameObject MPitemGet;
-    public GameObject AirD;
 
     void Start()
     {
@@ -92,8 +92,6 @@ public class PlayerHPBar : MonoBehaviour
         Kurageflag = false;
         gameoverflag = false;
         MPitemGet.SetActive(false);
-
-        AirD = GameObject.Find("player");
     }
 
     void Update()
@@ -101,6 +99,11 @@ public class PlayerHPBar : MonoBehaviour
         pTime += Time.deltaTime;
         audio += Time.deltaTime;
         MPtime += Time.deltaTime;
+
+        if(AirgameObject.GetComponent<Air>().Airflag == true){
+            currentHp = currentHp - Airdamage;
+            slider.value = (float)currentHp / (float)maxHp;
+        }
 
         if (MPflag == true && MPtime >= MPtimer)
         {
@@ -134,12 +137,6 @@ public class PlayerHPBar : MonoBehaviour
         }
         else if(Kurageflag == false){
             KurageEffect.SetActive(false);
-        }
-
-        if(AirD.GetComponent<Air>().currentAir <= 0){
-            Debug.Log("Airdamage");
-            currentHp = currentHp - Airdamage;
-            slider.value = (float)currentHp / (float)maxHp;
         }
     }
 
@@ -225,15 +222,16 @@ public class PlayerHPBar : MonoBehaviour
         }
 
         if(other.gameObject.tag == "AirMAX"){
-            Debug.Log("aaa");
+            Destroy(other.gameObject);
+            AirgameObject.GetComponent<Air>().Airflag = false;
             //Air回復処理
-            AirCursor.GetComponent<Air>().currentAir += 70;
+            AirgameObject.GetComponent<Air>().currentAir += 70;
             //Air残量が１００以上だったら
-            if(AirCursor.GetComponent<Air>().currentAir >= 100){
-                AirCursor.GetComponent<Air>().currentAir = 100;
+            if(AirgameObject.GetComponent<Air>().currentAir >= 100){
+                AirgameObject.GetComponent<Air>().currentAir = 100;
             }
             //Sliderに反映
-            AirCursor.GetComponent<Air>().slider.value = (float)AirCursor.GetComponent<Air>().currentAir / (float)AirCursor.GetComponent<Air>().maxAir;
+            AirCursor.GetComponent<Air>().slider.value = (float)AirgameObject.GetComponent<Air>().currentAir / (float)AirgameObject.GetComponent<Air>().maxAir;
         }
 
         if (other.gameObject.tag == "goal" && player.goalitem == true)

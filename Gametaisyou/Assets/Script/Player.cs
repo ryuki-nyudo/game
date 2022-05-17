@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour{
     public float speed;
     public float attackspeed = 18;
     public ParticleSystem goaliEffect;
@@ -95,8 +94,7 @@ public class Player : MonoBehaviour
 
         if(nock == false && ntime >= nTimer){
             //右入力で左向きに動く
-            if (horizontal > 0)
-            {
+            if (horizontal > 0){
                 rb.velocity = new Vector2(speed, rb.velocity.y);
                 Accel();
             }
@@ -108,8 +106,7 @@ public class Player : MonoBehaviour
             }
 
             //上入力で上向きに動く
-            if (vertical > 0)
-            {
+            if (vertical > 0){
                 rb.velocity = new Vector2(rb.velocity.x, speed);
 
                 Accel();
@@ -118,9 +115,7 @@ public class Player : MonoBehaviour
 
             }
             //下入力で下向きに動く
-            else if (vertical < 0)
-            {
-
+            else if (vertical < 0){
                 rb.velocity = new Vector2(rb.velocity.x, -speed);
                 Accel();
 

@@ -12,6 +12,7 @@ public class Air : MonoBehaviour
     public Slider slider;
 
     public GameObject Fade;
+    public bool Airflag;
 
     void Start()
     {
@@ -20,11 +21,12 @@ public class Air : MonoBehaviour
         currentAir = maxAir;
 
         Fade = GameObject.Find("AirFade");
+        Airflag = false;
     }
 
     void Update()
     {
-        if (currentAir <= maxAir){
+        if (currentAir <= maxAir && Airflag == false){
             currentAir -= 0.025;
             slider.value = (float)currentAir / (float)maxAir;
         }
@@ -38,7 +40,8 @@ public class Air : MonoBehaviour
             }
         }
 
-        if(currentAir <= 0){
+        if(currentAir <= 0 && Airflag == false){
+            Airflag = true;
             currentAir = 0;
         }
     }
