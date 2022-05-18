@@ -9,7 +9,7 @@ public class BosHPBar : MonoBehaviour
 {
     //最大HPと現在のHP。
     int maxHp = 155;
-    int currentHp;
+    public int currentHp;
     //Sliderを入れる
     public Slider slider;
     public int damage = 20;

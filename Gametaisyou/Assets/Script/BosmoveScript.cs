@@ -1,20 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class BosmoveScript : MonoBehaviour
-{
+//public class BosmoveScript : MonoBehaviour
+//{
 
-    public float nowPosi;
+//    public float nowPosi;
 
-    void Start()
-    {
-        nowPosi = this.transform.position.y;
-    }
+//    void Start()
+//    {
+//        nowPosi = this.transform.position.y;
+//    }
 
-    void Update()
-    {
-        transform.position = new Vector3(transform.position.x, nowPosi + Mathf.PingPong(Time.time / 1, 2f), transform.position.z);
-    }
+//    void Update()
+//    {
+//        if (this.transform.position.x)
+//        {
 
-}
+//        }
+//        transform.position = new Vector3(transform.position.x, nowPosi + Mathf.PingPong(Time.time / 1, 2f), transform.position.z);
+//    }
+
+//}

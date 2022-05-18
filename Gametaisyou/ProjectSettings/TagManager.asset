@@ -17,6 +17,7 @@ TagManager:
   - Airitem
   - MAXHPitem
   - AirMAX
+  - Otakara
   layers:
   - Default
   - TransparentFX
